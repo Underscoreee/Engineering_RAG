@@ -52,6 +52,7 @@ Each task must:
 13. Never claim retrieval quality improvements without evaluation results.
 14. Run tests before declaring a task complete.
 15. Do not modify unrelated files.
+16. 不要为了满足 Chunk 大小而破坏规范语义边界
 
 ## Current Development Stage
 

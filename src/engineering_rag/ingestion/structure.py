@@ -52,6 +52,8 @@ class DocumentStructure(BaseModel):
 
     document_id: str
     blocks: list[StructuredBlock] = Field(default_factory=list)
+    standard_name: str | None = None
+    standard_code: str | None = None
 
 
 class StructureParser:
