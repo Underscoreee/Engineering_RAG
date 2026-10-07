@@ -63,6 +63,7 @@ Completed:
 - Task 3: Engineering-standard structure parsing
 - Task 4: Structure-aware Chunking
 - Task 4.1: Chunking engineering cleanup
+- Task 4.2: Real PDF end-to-end inspection tool
 
 Current:
 
