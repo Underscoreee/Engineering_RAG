@@ -53,31 +53,21 @@ Each task must:
 14. Run tests before declaring a task complete.
 15. Do not modify unrelated files.
 
-## Current Task Constraints
+## Current Development Stage
 
-The current task is ONLY:
+Completed:
 
-- project skeleton
-- Python configuration
-- basic configuration module
-- Chunk data model
-- Chunk unit tests
+- Task 1: Project skeleton + Chunk model
+- Task 2: PyMuPDF PDF parser
+- Task 3: Engineering-standard structure parsing
 
-Do NOT implement:
+Current task:
 
-- PDF parser
-- OCR
-- MinerU
-- PaddleOCR
-- Elasticsearch
-- Milvus
-- embedding model
-- reranker
-- LLM
-- FastAPI
-- query rewrite
-- HyDE
-- intent classifier
+- Task 4: Structure-aware Chunking
+
+Task-specific constraints for the current task should be defined in the user request.
+
+Do not implement future tasks unless explicitly requested.
 
 ## Coding Style
 
