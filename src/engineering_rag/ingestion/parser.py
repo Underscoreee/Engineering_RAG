@@ -38,6 +38,8 @@ class Document(BaseModel):
 
     document_id: str
     source_file: str
+    standard_name: str | None = None
+    standard_code: str | None = None
     page_count: int = Field(ge=0)
     pages: list[Page] = Field(default_factory=list)
 
@@ -49,7 +51,13 @@ class PdfParseError(Exception):
 class PdfParser:
     """Extract page text and text blocks from a digital PDF."""
 
-    def parse(self, pdf_path: str | Path) -> Document:
+    def parse(
+        self,
+        pdf_path: str | Path,
+        *,
+        standard_name: str | None = None,
+        standard_code: str | None = None,
+    ) -> Document:
         """Parse ``pdf_path`` and return a JSON-serializable Document."""
 
         path = Path(pdf_path)
@@ -71,6 +79,8 @@ class PdfParser:
         return Document(
             document_id=path.stem,
             source_file=str(path),
+            standard_name=standard_name,
+            standard_code=standard_code,
             page_count=len(pages),
             pages=pages,
         )

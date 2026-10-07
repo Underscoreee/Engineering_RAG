@@ -27,6 +27,7 @@ class Chunk(BaseModel):
     embedding_text: str = ""
     token_count: int = Field(default=0, ge=0)
     parent_chunk_id: str | None = None
+    logical_chunk_id: str | None = None
     table_id: str | None = None
     figure_id: str | None = None
     formula_id: str | None = None

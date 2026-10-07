@@ -51,9 +51,10 @@ class DocumentStructure(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     document_id: str
-    blocks: list[StructuredBlock] = Field(default_factory=list)
+    source_file: str | None = None
     standard_name: str | None = None
     standard_code: str | None = None
+    blocks: list[StructuredBlock] = Field(default_factory=list)
 
 
 class StructureParser:
@@ -87,7 +88,13 @@ class StructureParser:
                 item.role = margin_role
             structured.append(item)
 
-        return DocumentStructure(document_id=document.document_id, blocks=structured)
+        return DocumentStructure(
+            document_id=document.document_id,
+            source_file=document.source_file,
+            standard_name=document.standard_name,
+            standard_code=document.standard_code,
+            blocks=structured,
+        )
 
     def _classify(self, page_number: int, block: TextBlock, state: "_StructureState") -> StructuredBlock:
         text = block.text.strip()

@@ -138,8 +138,6 @@ class ClauseGrouper:
                 continue
 
             if block.role in (StructureRole.HEADER, StructureRole.FOOTER):
-                flush()
-                drafts.append(new_draft(block, "paragraph", is_explanation))
                 continue
 
             if current is not None and current.is_explanation == is_explanation:
@@ -249,6 +247,18 @@ class ChunkIdGenerator:
         )
         return hashlib.sha256(identity.encode("utf-8")).hexdigest()[:24]
 
+    @staticmethod
+    def generate_logical(
+        document_id: str,
+        clause_number: str,
+        is_explanation: bool,
+        logical_position: str,
+    ) -> str:
+        identity = "\0".join(
+            [document_id, clause_number, str(is_explanation), logical_position]
+        )
+        return hashlib.sha256(identity.encode("utf-8")).hexdigest()[:24]
+
 
 class EngineeringChunker:
     """Convert a DocumentStructure into citation-preserving logical chunks."""
@@ -284,29 +294,27 @@ class EngineeringChunker:
         for draft_index, draft in enumerate(drafts):
             split_parts = splitter.split(draft)
             all_source_ids = self._source_ids(draft.blocks)
-            logical_parent_id = ChunkIdGenerator.generate(
-                document.document_id,
-                draft.content_type,
-                all_source_ids,
-                f"logical-{draft.key}",
-            )
+            logical_chunk_id = None
+            if draft.content_type in ("clause", "explanation") and draft.clause_number:
+                logical_chunk_id = ChunkIdGenerator.generate_logical(
+                    document.document_id,
+                    draft.clause_number,
+                    draft.is_explanation,
+                    all_source_ids[0] if all_source_ids else draft.key,
+                )
             for part_index, part in enumerate(split_parts):
                 chunk = self._make_chunk(
                     document,
                     draft,
                     part,
                     f"{draft_index}-{part_index}",
-                    parent_chunk_id=None,
+                    logical_chunk_id=logical_chunk_id,
                 )
-                if len(split_parts) > 1 and draft.parent_key is None:
-                    chunk.parent_chunk_id = logical_parent_id
-                elif draft.parent_key is not None:
+                if draft.parent_key is not None:
                     chunk.parent_chunk_id = first_id_by_key.get(draft.parent_key)
                 chunks.append(chunk)
                 if part_index == 0:
-                    first_id_by_key[draft.key] = (
-                        logical_parent_id if len(split_parts) > 1 else chunk.chunk_id
-                    )
+                    first_id_by_key[draft.key] = chunk.chunk_id
 
         return chunks
 
@@ -316,7 +324,7 @@ class EngineeringChunker:
         draft: _Draft,
         parts: list[tuple[StructuredBlock, str]],
         position: str,
-        parent_chunk_id: str | None,
+        logical_chunk_id: str | None,
     ) -> Chunk:
         source_blocks = [block for block, _ in parts]
         source_block_ids = self._source_ids(source_blocks)
@@ -360,7 +368,7 @@ class EngineeringChunker:
             context_header=context_header,
             embedding_text=embedding_text,
             token_count=self.token_counter.count(content),
-            parent_chunk_id=parent_chunk_id,
+            logical_chunk_id=logical_chunk_id,
         )
 
     @staticmethod

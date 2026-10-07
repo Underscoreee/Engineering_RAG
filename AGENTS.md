@@ -61,12 +61,16 @@ Completed:
 - Task 1: Project skeleton + Chunk model
 - Task 2: PyMuPDF PDF parser
 - Task 3: Engineering-standard structure parsing
-
-Current task:
-
 - Task 4: Structure-aware Chunking
+- Task 4.1: Chunking engineering cleanup
+
+Current:
+
+- Task 5: BM25 + Golden Dataset + Recall@K (not started)
 
 Task-specific constraints for the current task should be defined in the user request.
+
+Do not implement Elasticsearch or BM25 until Task 5 is explicitly requested.
 
 Do not implement future tasks unless explicitly requested.
 
@@ -97,6 +101,17 @@ Chunk must contain at least:
 - content_type
 - is_mandatory
 - is_explanation
+- chapter
+- section
+- source_block_ids
+- context_header
+- embedding_text
+- token_count
+- parent_chunk_id
+- logical_chunk_id
+- table_id
+- figure_id
+- formula_id
 
 Chunk metadata must remain suitable for later:
 

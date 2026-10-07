@@ -95,6 +95,17 @@ def test_document_serializes_to_json(two_page_pdf: Path) -> None:
     assert decoded["pages"][0]["page_number"] == 1
 
 
+def test_parser_preserves_caller_supplied_standard_metadata(two_page_pdf: Path) -> None:
+    document = PdfParser().parse(
+        two_page_pdf,
+        standard_name="Engineering Standard",
+        standard_code="STD-001",
+    )
+
+    assert document.standard_name == "Engineering Standard"
+    assert document.standard_code == "STD-001"
+
+
 def test_cli_prints_valid_json(two_page_pdf: Path) -> None:
     result = subprocess.run(
         [sys.executable, "scripts/parse_pdf.py", str(two_page_pdf)],

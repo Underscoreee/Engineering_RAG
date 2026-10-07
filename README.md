@@ -8,6 +8,9 @@ Task 1：项目骨架、基础配置、Chunk 数据模型及其单元测试。
 Task 2：PyMuPDF PDF 解析。
 Task 3：工程规范结构识别。
 Task 4：基于规范结构的智能 Chunking。
+Task 4.1：Chunking 工程化收尾与 PDF 到 Chunk 集成测试。
+
+Task 5（BM25、Golden Dataset、Recall@K）尚未开始。
 
 ## 创建虚拟环境
 

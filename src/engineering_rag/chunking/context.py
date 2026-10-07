@@ -24,11 +24,12 @@ class ContextHeaderBuilder:
         elif standard_code:
             lines.append(f"（{standard_code}）")
 
-        structural_values = [chapter, section, clause_number]
-        values = [value for value in structural_values if value]
+        values = [value for value in section_path if value]
         if not values:
-            values = list(section_path)
+            values = [value for value in (chapter, section, clause_number) if value]
+        seen: set[str] = set()
         for value in values:
-            if value not in lines and (not lines or not value.startswith("《")):
+            if value not in seen:
                 lines.append(f"> {value}")
+                seen.add(value)
         return "\n".join(lines)

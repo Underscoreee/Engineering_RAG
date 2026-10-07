@@ -191,6 +191,61 @@ def test_context_header_has_standard_and_structure_metadata() -> None:
     assert "4.2.3" in chunk.context_header
 
 
+def test_context_header_uses_full_section_path() -> None:
+    deep_clause = clause_block(
+        "4.2.1.1 强度要求。",
+        clause_number="4.2.1.1",
+        chapter="4 基本设计规定",
+        section="4.2 材料",
+        section_path=[
+            "4 基本设计规定",
+            "4.2 材料",
+            "4.2.1 混凝土",
+            "4.2.1.1 强度",
+        ],
+    )
+
+    chunk = EngineeringChunker().chunk(document(deep_clause))[0]
+
+    assert all(
+        level in chunk.context_header
+        for level in (
+            "4 基本设计规定",
+            "4.2 材料",
+            "4.2.1 混凝土",
+            "4.2.1.1 强度",
+        )
+    )
+
+
+def test_context_header_omits_missing_standard_metadata() -> None:
+    structure = DocumentStructure(
+        document_id="doc",
+        standard_name="混凝土结构设计规范",
+        blocks=[clause_block()],
+    )
+
+    chunk = EngineeringChunker().chunk(structure)[0]
+
+    assert "《混凝土结构设计规范》" in chunk.context_header
+    assert "None" not in chunk.context_header
+
+
+def test_context_header_falls_back_when_section_path_is_empty() -> None:
+    source = clause_block(
+        section_path=[],
+        chapter="4 基本设计规定",
+        section="4.2 材料",
+        clause_number="4.2.3",
+    )
+
+    chunk = EngineeringChunker().chunk(document(source))[0]
+
+    assert "> 4 基本设计规定" in chunk.context_header
+    assert "> 4.2 材料" in chunk.context_header
+    assert "> 4.2.3" in chunk.context_header
+
+
 def test_embedding_text_does_not_change_original_content() -> None:
     original = "4.2.3 混凝土强度等级应符合规定。"
     chunk = EngineeringChunker().chunk(document(clause_block(original)))[0]
@@ -218,6 +273,9 @@ def test_chunk_ids_are_stable_across_runs() -> None:
     second = EngineeringChunker().chunk(structure)
 
     assert [chunk.chunk_id for chunk in first] == [chunk.chunk_id for chunk in second]
+    assert [chunk.logical_chunk_id for chunk in first] == [
+        chunk.logical_chunk_id for chunk in second
+    ]
 
 
 def test_page_range_uses_all_source_blocks() -> None:
@@ -244,7 +302,9 @@ def test_oversized_clause_splits_at_block_boundaries_and_keeps_metadata() -> Non
     assert all(chunk.token_count <= 7 for chunk in chunks)
     assert all(chunk.clause_number == "4.2.3" for chunk in chunks)
     assert all(chunk.section_path == chunks[0].section_path for chunk in chunks)
-    assert all(chunk.parent_chunk_id for chunk in chunks)
+    assert all(chunk.parent_chunk_id is None for chunk in chunks)
+    assert len({chunk.logical_chunk_id for chunk in chunks}) == 1
+    assert chunks[0].logical_chunk_id is not None
     assert {source_id for chunk in chunks for source_id in chunk.source_block_ids} == {
         "p1_block_0",
         "p1_block_1",
@@ -357,3 +417,27 @@ def test_token_counter_is_deterministic() -> None:
     counter = TokenCounter()
 
     assert counter.count("规范 engineering 1") == counter.count("规范 engineering 1")
+
+
+def test_header_footer_are_ignored_by_chunker() -> None:
+    chunks = EngineeringChunker().chunk(
+        document(
+            clause_block(),
+            block("Repeated header", StructureRole.HEADER, number=1),
+            block("Paragraph after header", StructureRole.PARAGRAPH, number=2, clause_number="4.2.3"),
+            block("Repeated footer", StructureRole.FOOTER, number=3),
+            clause_block(
+                "4.2.4 Next clause",
+                number=4,
+                clause_number="4.2.4",
+                section_path=["4.2.4"],
+            ),
+        )
+    )
+
+    all_content = "\n".join(chunk.content for chunk in chunks)
+    assert len(chunks) == 2
+    assert "Paragraph after header" in chunks[0].content
+    assert "Repeated header" not in all_content
+    assert "Repeated footer" not in all_content
+    assert [chunk.clause_number for chunk in chunks] == ["4.2.3", "4.2.4"]
