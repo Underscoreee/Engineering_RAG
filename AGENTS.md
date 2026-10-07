@@ -1,0 +1,134 @@
+# Engineering RAG Project
+
+## Project Goal
+
+Build an engineering-standard RAG question answering system.
+
+Main pipeline:
+
+PDF
+-> Parsing
+-> OCR
+-> Structure extraction
+-> Chunking
+-> Embedding
+-> Milvus
+-> Elasticsearch BM25
+-> Query processing
+-> Hybrid retrieval
+-> Reranking
+-> LLM generation
+-> Citation validation
+-> Evaluation
+
+## Current Development Stage
+
+This project is developed incrementally.
+
+Do NOT implement the whole system at once.
+
+Each task must:
+1. Make the smallest necessary change.
+2. Define clear input/output contracts.
+3. Add tests.
+4. Run tests.
+5. Fix failures before finishing.
+6. Avoid modifying unrelated modules.
+
+## Engineering Rules
+
+1. Do not implement the entire system in one task.
+2. Work in small, independently testable modules.
+3. Every non-trivial module must have unit tests.
+4. Every feature must have a clear input/output contract.
+5. Do not silently change existing APIs.
+6. Do not hard-code model paths, database URLs, or API keys.
+7. Use environment variables or configuration files.
+8. Keep ingestion, retrieval, query processing, generation, and evaluation loosely coupled.
+9. Prefer interfaces/adapters for external models and databases.
+10. Preserve document metadata throughout the retrieval pipeline.
+11. Every Chunk must preserve enough metadata for later citation.
+12. Every production bug should receive a regression test.
+13. Never claim retrieval quality improvements without evaluation results.
+14. Run tests before declaring a task complete.
+15. Do not modify unrelated files.
+
+## Current Task Constraints
+
+The current task is ONLY:
+
+- project skeleton
+- Python configuration
+- basic configuration module
+- Chunk data model
+- Chunk unit tests
+
+Do NOT implement:
+
+- PDF parser
+- OCR
+- MinerU
+- PaddleOCR
+- Elasticsearch
+- Milvus
+- embedding model
+- reranker
+- LLM
+- FastAPI
+- query rewrite
+- HyDE
+- intent classifier
+
+## Coding Style
+
+- Python 3.11+
+- Type hints
+- Pydantic for data models
+- pytest for testing
+- Ruff for linting when appropriate
+- Small functions
+- Explicit error handling
+- Structured logging
+
+## Chunk Requirements
+
+Chunk must contain at least:
+
+- chunk_id
+- document_id
+- content
+- page_start
+- page_end
+- standard_name
+- standard_code
+- clause_number
+- section_path
+- content_type
+- is_mandatory
+- is_explanation
+
+Chunk metadata must remain suitable for later:
+
+- vector retrieval
+- BM25 retrieval
+- reranking
+- citation
+- evaluation
+
+## Development Workflow
+
+For every task:
+
+1. Inspect existing files.
+2. Explain the implementation approach briefly.
+3. Implement the smallest necessary change.
+4. Add or update tests.
+5. Run relevant tests.
+6. Fix failures.
+7. Report:
+   - files changed
+   - tests executed
+   - test results
+   - remaining limitations
+
+Do not implement future tasks unless explicitly requested.
