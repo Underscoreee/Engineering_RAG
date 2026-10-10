@@ -1,0 +1,3021 @@
+[
+  {
+    "query_id": "example-simple1",
+    "query": "混凝土结构及构件可采取哪些耐久性技术措施？",
+    "query_type": "simple",
+    "relevant": [
+      {
+        "document_id": "example",
+        "clause_number": "3.5.4",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      {
+        "document_id": "example",
+        "clause_number": "3.5.4",
+        "is_explanation": true,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      }
+    ],
+    "metrics": {
+      "Recall@1": 0.5,
+      "Precision@1": 1.0,
+      "HitRate@1": 1.0,
+      "Recall@3": 0.5,
+      "Precision@3": 0.3333333333333333,
+      "HitRate@3": 1.0,
+      "Recall@5": 0.5,
+      "Precision@5": 0.2,
+      "HitRate@5": 1.0,
+      "Recall@10": 0.5,
+      "Precision@10": 0.1,
+      "HitRate@10": 1.0,
+      "MRR@5": 1.0,
+      "nDCG@5": 0.6131471927654584,
+      "MRR@10": 1.0,
+      "nDCG@10": 0.6131471927654584
+    },
+    "results": [
+      {
+        "chunk_id": "cf7a7b8257a63faf28e9c2f3",
+        "document_id": "example",
+        "content": "3.5.4 混凝土结构及构件尚应采取下列耐久性技术措施：\n",
+        "score": 170.24756,
+        "rank": 1,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": "3.5.4",
+        "section_path": [
+          "6 \n当使用非碱活性骨料时，对混凝土中的碱含量可不作限制。",
+          "3.5.4"
+        ],
+        "page_start": 30,
+        "page_end": 30,
+        "content_type": "clause",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p30_block_0"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 6 \n当使用非碱活性骨料时，对混凝土中的碱含量可不作限制。\n> 3.5.4",
+        "logical_chunk_id": "721032ca02444ce408e4fb61",
+        "parent_chunk_id": null,
+        "chapter": "6 \n当使用非碱活性骨料时，对混凝土中的碱含量可不作限制。",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "d8c09413faa9ad6e891783b3",
+        "document_id": "example",
+        "content": "采取专门的有效措施。\n3.5.7 耐久性环境类别为四类和五类的混凝土结构，其耐久性\n",
+        "score": 114.30895,
+        "rank": 2,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "4 \n1昆凝土保护层厚度应符合本规范第8. 2. 1 条的规定；当"
+        ],
+        "page_start": 30,
+        "page_end": 30,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p30_block_25"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 4 \n1昆凝土保护层厚度应符合本规范第8. 2. 1 条的规定；当",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "4 \n1昆凝土保护层厚度应符合本规范第8. 2. 1 条的规定；当",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "a6f8531ebb74fc5fe13a6dce",
+        "document_id": "example",
+        "content": "2\n提出对混凝土材料的耐久性基本要求；\n3\n确定构件中钢筋的混凝土保护层厚度；\n4\n不同环境条件下的耐久性技术措施；\n5\n提出结构使用阶段的检测与维护要求。\n",
+        "score": 108.90628,
+        "rank": 3,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "1\n确定结构所处的环境类别；"
+        ],
+        "page_start": 28,
+        "page_end": 28,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p28_block_6"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 1\n确定结构所处的环境类别；",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "1\n确定结构所处的环境类别；",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "f7b6c373cf5a81f33051af67",
+        "document_id": "example",
+        "content": "对结构表面采用保护层及表面处理的防护措施，形成有利的\n混凝土表面小环境，是提高耐久性的有效措施。\n",
+        "score": 96.149376,
+        "rank": 4,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "3\n基本设计规定",
+          "3.5\n耐久性设计"
+        ],
+        "page_start": 294,
+        "page_end": 294,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p294_block_4"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 3\n基本设计规定\n> 3.5\n耐久性设计",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "3\n基本设计规定",
+        "section": "3.5\n耐久性设计",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "f79e4f51b13f881ea76bc253",
+        "document_id": "example",
+        "content": "3.5.4\n混凝土结构及构件尚应采取下列耐久性技术措施：\n1\n预应力混凝土结构中的预应力筋应根据具体情况采取表\n面防护、孔道灌浆、加大混凝土保护层厚度等措施，外露的锚固\n端应采取封锚和混凝土表面处理等有效措施；\n2\n有抗渗要求的混凝土结构，混凝土的抗渗等级应符合有\n关标准的要求；\n3\n严寒及寒冷地区的潮湿环境中，结构混凝土应满足抗冻\n要求，混凝土抗冻等级应符合有关标准的要求；\n4\n处于二、三类环境中的悬臂构件宜采用悬臂梁-板的结构\n形式，或在其上表面增设防护层；\n5\n处于二、三类环境中的结构构件，其表面的预埋件、吊\n钩、连接件等金属部件应采取可靠的防锈措施，对于后张预应力\n混凝土外露金属锚具，其防护要求见本规范第10.3.13条；\n6\n处在三类环境中的混凝土结构构件，可采用阻锈剂、环\n氧树脂涂层钢筋或其他具有耐腐蚀性能的钢筋、采取阴极保护措\n施或采用可更换的构件等措施。\n3.5.5\n一类环境中，设计使用年限为100年的混凝土结构应符\n合下列规定：\n1\n钢筋混凝土结构的最低强度等级为C30;\n预应力混凝土\n结构的最低强度等级为C40;\n2\n混凝土中的最大氯离子含量为0.06%;\n3\n宜使用非碱活性骨料，当使用碱活性骨料时，混凝土中\n的最大碱含量为3.0kg/m³;\n4\n混凝土保护层厚度应符合本规范第8.2.1条的规定；当\n采取有效的表面防护措施时，混凝土保护层厚度可适当减小。\n3.5.6\n二、三类环境中，设计使用年限100年的混凝土结构应\n采取专门的有效措施。\n3.5.7\n耐久性环境类别为四类和五类的混凝土结构，其耐久性\n要求应符合有关标准的规定。\n3.5.8\n混凝土结构在设计使用年限内尚应遵守下列规定：\n15\n1\n建立定期检测、维修制度；\n2\n设计中可更换的混凝土构件应按规定更换；\n3\n构件表面的防护层，应按规定维护或更换；\n4\n结构出现可见的耐久性缺陷时，应及时进行处理。\n",
+        "score": 90.736465,
+        "rank": 5,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": "3.5.4",
+        "section_path": [
+          "6\n当使用非碱活性骨料时，对混凝土中的碱含量可不作限制。",
+          "3.5.4"
+        ],
+        "page_start": 30,
+        "page_end": 31,
+        "content_type": "clause",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p30_block_1",
+          "p30_block_2",
+          "p30_block_3",
+          "p30_block_4",
+          "p30_block_5",
+          "p30_block_6",
+          "p30_block_7",
+          "p30_block_8",
+          "p30_block_9",
+          "p30_block_10",
+          "p30_block_11",
+          "p30_block_12",
+          "p30_block_13",
+          "p30_block_0",
+          "p31_block_1"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 6\n当使用非碱活性骨料时，对混凝土中的碱含量可不作限制。\n> 3.5.4",
+        "logical_chunk_id": "eb4fd6c6a852c07a7e726e27",
+        "parent_chunk_id": null,
+        "chapter": "6\n当使用非碱活性骨料时，对混凝土中的碱含量可不作限制。",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "0c07fcc63ced69784110ee89",
+        "document_id": "example",
+        "content": "采取耐久性保护措施的情况下，其厚度可适当减薄。\n",
+        "score": 90.2984,
+        "rank": 6,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "9 \n结构构件的基本规定",
+          "9.1\n板"
+        ],
+        "page_start": 360,
+        "page_end": 360,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p360_block_20"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 9 \n结构构件的基本规定\n> 9.1\n板",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "9 \n结构构件的基本规定",
+        "section": "9.1\n板",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "54bf880e9e5787698ada5cc9",
+        "document_id": "example",
+        "content": "3.1.6\n混凝土结构设计应考虑施工技术水平以及实际工程条件\n的可行性。有特殊要求的混凝土结构，应提出相应的施工要求。\n3.1.7\n设计应明确结构的用途；在设计使用年限内未经技术鉴\n定或设计许可，不得改变结构的用途和使用环境。\n",
+        "score": 86.88396,
+        "rank": 7,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "4\n结构及构件的构造、连接措施；"
+        ],
+        "page_start": 23,
+        "page_end": 23,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p23_block_3"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 4\n结构及构件的构造、连接措施；",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "4\n结构及构件的构造、连接措施；",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "cceea9cadf6cd458e46baa03",
+        "document_id": "example",
+        "content": "表3.5.3\n结构混凝土材料的耐久性基本要求\n",
+        "score": 83.6809,
+        "rank": 8,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "5 \n暴露的环境是指混凝土结构表面所处的环境。"
+        ],
+        "page_start": 29,
+        "page_end": 29,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p29_block_17"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 5 \n暴露的环境是指混凝土结构表面所处的环境。",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "5 \n暴露的环境是指混凝土结构表面所处的环境。",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "45a6ffb74cd388229dd41f5b",
+        "document_id": "example",
+        "content": "不确定性很大，一般建筑结构的耐久性设计只能采用经验性的定\n性方法解决。参考现行国家标准《混凝土结构耐久性设计规范》\nGB/T 50476的规定，根据调查研究及我国国情，并考虑房屋建\n筑混凝土结构的特点加以简化和调整，本规范规定了混凝土结构\n耐久性定性设计的基本内容。\n3.5.2\n结构所处环境是影响其耐久性的外因。本次修订对影响\n混凝土结构耐久性的环境类别进行了较详细的分类。环境类别是\n指混凝土暴露表面所处的环境条件，设计可根据实际情况确定适\n当的环境类别。\n",
+        "score": 81.911194,
+        "rank": 9,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "3\n基本设计规定",
+          "3.5\n耐久性设计"
+        ],
+        "page_start": 293,
+        "page_end": 293,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p293_block_1"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 3\n基本设计规定\n> 3.5\n耐久性设计",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "3\n基本设计规定",
+        "section": "3.5\n耐久性设计",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "7dcd2a2038878d70f4c8922a",
+        "document_id": "example",
+        "content": "8.2.1\n根据我国对混凝土结构耐久性的调研及分析，并参考\n《混凝土结构耐久性设计规范》GB/T 50476 以及国外相应规范、\n标准的有关规定，对混凝土保护层的厚度进行了以下调整：\n",
+        "score": 80.66698,
+        "rank": 10,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "8\n构造规定",
+          "8.2\n混凝土保护层"
+        ],
+        "page_start": 352,
+        "page_end": 352,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p352_block_4"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 8\n构造规定\n> 8.2\n混凝土保护层",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "8\n构造规定",
+        "section": "8.2\n混凝土保护层",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      }
+    ]
+  },
+  {
+    "query_id": "example-simple2",
+    "query": "混凝土结构中结构缝的设计应符合什么要求？",
+    "query_type": "simple",
+    "relevant": [
+      {
+        "document_id": "example",
+        "clause_number": "3.2.2",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      {
+        "document_id": "example",
+        "clause_number": "3.2.2",
+        "is_explanation": true,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      }
+    ],
+    "metrics": {
+      "Recall@1": 0.0,
+      "Precision@1": 0.0,
+      "HitRate@1": 0.0,
+      "Recall@3": 0.0,
+      "Precision@3": 0.0,
+      "HitRate@3": 0.0,
+      "Recall@5": 0.0,
+      "Precision@5": 0.0,
+      "HitRate@5": 0.0,
+      "Recall@10": 0.0,
+      "Precision@10": 0.0,
+      "HitRate@10": 0.0,
+      "MRR@5": 0.0,
+      "nDCG@5": 0.0,
+      "MRR@10": 0.0,
+      "nDCG@10": 0.0
+    },
+    "results": [
+      {
+        "chunk_id": "376058020cb669dfdc40c79b",
+        "document_id": "example",
+        "content": "5 \n宜采取减小偶然作用影响的措施。\n3.2.2 混凝土结构中结构缝的设计应符合下列要求：\n",
+        "score": 105.62454,
+        "rank": 1,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "4\n宜采用超静定结构，重要构件和关键传力部位应增加冗"
+        ],
+        "page_start": 23,
+        "page_end": 23,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p23_block_15"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 4\n宜采用超静定结构，重要构件和关键传力部位应增加冗",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "4\n宜采用超静定结构，重要构件和关键传力部位应增加冗",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "07c281e386d399aa1903813a",
+        "document_id": "example",
+        "content": "5\n宜采取减小偶然作用影响的措施。\n3.2.2\n混凝土结构中结构缝的设计应符合下列要求：\n",
+        "score": 105.62454,
+        "rank": 2,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "4\n结构及构件的构造、连接措施；",
+          "3.2\n结构方案"
+        ],
+        "page_start": 23,
+        "page_end": 23,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p23_block_7"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 4\n结构及构件的构造、连接措施；\n> 3.2\n结构方案",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "4\n结构及构件的构造、连接措施；",
+        "section": "3.2\n结构方案",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "f26c72ce337d52f39faf857d",
+        "document_id": "example",
+        "content": "3. 2.1 \n混凝土结构的设计方案应符合下列要求：\n",
+        "score": 103.65386,
+        "rank": 3,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2 正常使用极限状态：结构或结构构件达到正常使用的某",
+          "3.2\n结构方案"
+        ],
+        "page_start": 23,
+        "page_end": 23,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p23_block_8"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2 正常使用极限状态：结构或结构构件达到正常使用的某\n> 3.2\n结构方案",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2 正常使用极限状态：结构或结构构件达到正常使用的某",
+        "section": "3.2\n结构方案",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "c930e9fafb7e9c119e2c6c1c",
+        "document_id": "example",
+        "content": "3. 6.1 \n混凝土结构防连续倒塌设计宜符合下列要求：\n",
+        "score": 93.57888,
+        "rank": 4,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "4 \n结构出现可见的耐久性缺陷时，应及时进行处理。",
+          "3.6 \n防连续倒塌设计原则"
+        ],
+        "page_start": 31,
+        "page_end": 31,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p31_block_5"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 4 \n结构出现可见的耐久性缺陷时，应及时进行处理。\n> 3.6 \n防连续倒塌设计原则",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "4 \n结构出现可见的耐久性缺陷时，应及时进行处理。",
+        "section": "3.6 \n防连续倒塌设计原则",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "60616dee228b9ffb4d124e3f",
+        "document_id": "example",
+        "content": "要求。\n3.7.3 \n既有结构的设计应符合下列规定：\n",
+        "score": 86.732994,
+        "rank": 5,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "5 \n必要时可对使用功能作相应的调整，提出限制使用的"
+        ],
+        "page_start": 32,
+        "page_end": 32,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p32_block_19"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 5 \n必要时可对使用功能作相应的调整，提出限制使用的",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "5 \n必要时可对使用功能作相应的调整，提出限制使用的",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "cd2c7f21f365e9b1283c2307",
+        "document_id": "example",
+        "content": "3 \n可根据需要设置施工阶段的临时性结构缝。\n3.2.3 结构构件的连接应符合下列要求：\n",
+        "score": 86.23541,
+        "rank": 6,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2 \n宜控制结构缝的数量，并应采取有效措施减少设缝对使"
+        ],
+        "page_start": 23,
+        "page_end": 23,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p23_block_20"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2 \n宜控制结构缝的数量，并应采取有效措施减少设缝对使",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2 \n宜控制结构缝的数量，并应采取有效措施减少设缝对使",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "5f8f0663971b498d63f528b3",
+        "document_id": "example",
+        "content": "3\n可根据需要设置施工阶段的临时性结构缝。\n3.2.3\n结构构件的连接应符合下列要求：\n",
+        "score": 86.23541,
+        "rank": 7,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "4\n结构及构件的构造、连接措施；",
+          "3.2\n结构方案"
+        ],
+        "page_start": 23,
+        "page_end": 23,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p23_block_10"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 4\n结构及构件的构造、连接措施；\n> 3.2\n结构方案",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "4\n结构及构件的构造、连接措施；",
+        "section": "3.2\n结构方案",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "641b2d579d88766062924db0",
+        "document_id": "example",
+        "content": "设计下列结构时，尚应符合专门标准的有关规定：\n1\n超重混凝土结构、防辐射混凝土结构、耐酸(碱)混凝土\n结构等；\n",
+        "score": 86.159,
+        "rank": 8,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "11\n混凝土结构构件抗震设计......................................................376",
+          "11.7\n剪力墙及连梁......................................................................................394"
+        ],
+        "page_start": 282,
+        "page_end": 282,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p282_block_5"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 11\n混凝土结构构件抗震设计......................................................376\n> 11.7\n剪力墙及连梁......................................................................................394",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "11\n混凝土结构构件抗震设计......................................................376",
+        "section": "11.7\n剪力墙及连梁......................................................................................394",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "f709dc2c35cbb70684f29181",
+        "document_id": "example",
+        "content": "无粘结预应力混凝土结构的抗震设计，应符合专门规定。\n",
+        "score": 85.53373,
+        "rank": 9,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "3\n当端柱承受集中荷载时，应满足框架柱的配筋要求。",
+          "11.8\n预应力混凝土结构构件"
+        ],
+        "page_start": 213,
+        "page_end": 213,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p213_block_29"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 3\n当端柱承受集中荷载时，应满足框架柱的配筋要求。\n> 11.8\n预应力混凝土结构构件",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "3\n当端柱承受集中荷载时，应满足框架柱的配筋要求。",
+        "section": "11.8\n预应力混凝土结构构件",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "6530d9105db72c845f285aa6",
+        "document_id": "example",
+        "content": "3.2.4\n混凝土结构设计应符合节省材料、方便施工、降低能耗\n8 \n与保护环境的要求。\n",
+        "score": 85.072,
+        "rank": 10,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": "3.2.4",
+        "section_path": [
+          "3 \n应考虑构件变形对连接节点及相邻结构或构件造成的影响。",
+          "3.2.4"
+        ],
+        "page_start": 23,
+        "page_end": 24,
+        "content_type": "clause",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p23_block_24",
+          "p23_block_25",
+          "p24_block_0"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 3 \n应考虑构件变形对连接节点及相邻结构或构件造成的影响。\n> 3.2.4",
+        "logical_chunk_id": "bce22b4f0b9f25949aa710c2",
+        "parent_chunk_id": null,
+        "chapter": "3 \n应考虑构件变形对连接节点及相邻结构或构件造成的影响。",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      }
+    ]
+  },
+  {
+    "query_id": "example-limit",
+    "query": "板中受力钢筋的间距要求是多少？",
+    "query_type": "limit",
+    "relevant": [
+      {
+        "document_id": "example-document",
+        "clause_number": "9.1.3",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      }
+    ],
+    "metrics": {
+      "Recall@1": 0.0,
+      "Precision@1": 0.0,
+      "HitRate@1": 0.0,
+      "Recall@3": 0.0,
+      "Precision@3": 0.0,
+      "HitRate@3": 0.0,
+      "Recall@5": 0.0,
+      "Precision@5": 0.0,
+      "HitRate@5": 0.0,
+      "Recall@10": 0.0,
+      "Precision@10": 0.0,
+      "HitRate@10": 0.0,
+      "MRR@5": 0.0,
+      "nDCG@5": 0.0,
+      "MRR@10": 0.0,
+      "nDCG@10": 0.0
+    },
+    "results": [
+      {
+        "chunk_id": "e5e124dd925045de4b164bdc",
+        "document_id": "example",
+        "content": "9.1. 3 \n板中受力钢筋的间距，当板厚不大于150mm 时不宜大\n",
+        "score": 62.8898,
+        "rank": 1,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2 \n现浇钢筋混凝土板的厚度不应小于表9. 1. z 规定的数值。"
+        ],
+        "page_start": 127,
+        "page_end": 127,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p127_block_9"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2 \n现浇钢筋混凝土板的厚度不应小于表9. 1. z 规定的数值。",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2 \n现浇钢筋混凝土板的厚度不应小于表9. 1. z 规定的数值。",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "90ef4bafe478aa978e6269c2",
+        "document_id": "example",
+        "content": "求：包括钢筋截面积、直径、间距、伸入板内的锚固长度以及板\n",
+        "score": 54.625435,
+        "rank": 2,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "9 \n结构构件的基本规定",
+          "9.1\n板"
+        ],
+        "page_start": 361,
+        "page_end": 361,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p361_block_13"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 9 \n结构构件的基本规定\n> 9.1\n板",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "9 \n结构构件的基本规定",
+        "section": "9.1\n板",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "bd7e73f82a9e9b9ab77c8804",
+        "document_id": "example",
+        "content": "9. 1. 3 \n受力钢筋的间距过大不利于板的受力，且不利于裂缝控\n",
+        "score": 54.239895,
+        "rank": 3,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "9 \n结构构件的基本规定",
+          "9.1\n板"
+        ],
+        "page_start": 360,
+        "page_end": 360,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p360_block_21"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 9 \n结构构件的基本规定\n> 9.1\n板",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "9 \n结构构件的基本规定",
+        "section": "9.1\n板",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "e3eec48034b9412d67d972ca",
+        "document_id": "example",
+        "content": "采取耐久性保护措施的情况下，其厚度可适当减薄。\n9.1.3\n受力钢筋的间距过大不利于板的受力，且不利于裂缝控\n制。根据工程经验，规定了常用混凝土板中受力钢筋的最大\n间距。\n",
+        "score": 54.10647,
+        "rank": 4,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "9\n结构构件的基本规定",
+          "9.1\n板"
+        ],
+        "page_start": 360,
+        "page_end": 360,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p360_block_8"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 9\n结构构件的基本规定\n> 9.1\n板",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "9\n结构构件的基本规定",
+        "section": "9.1\n板",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "3ef22163ee52e4ecff67a845",
+        "document_id": "example",
+        "content": "配筋净间距的要求，其数值是根据试验研究及工程经验确定的。\n",
+        "score": 53.770252,
+        "rank": 5,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2 \n梁正弯矩区普通钢筋的最小面积",
+          "10.3 \n预应力混凝土构造规定"
+        ],
+        "page_start": 386,
+        "page_end": 386,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p386_block_23"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2 \n梁正弯矩区普通钢筋的最小面积\n> 10.3 \n预应力混凝土构造规定",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2 \n梁正弯矩区普通钢筋的最小面积",
+        "section": "10.3 \n预应力混凝土构造规定",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "e0f48de66318c7ad10055644",
+        "document_id": "example",
+        "content": "弯折锚固。\n9.2.5 \n梁中受扭纵向钢筋最小配筋率的要求，是以纯扭构件受\n",
+        "score": 52.28218,
+        "rank": 6,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "9 \n结构构件的基本规定",
+          "9.2\n梁"
+        ],
+        "page_start": 364,
+        "page_end": 364,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p364_block_3"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 9 \n结构构件的基本规定\n> 9.2\n梁",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "9 \n结构构件的基本规定",
+        "section": "9.2\n梁",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "427b340f5674dede71b62423",
+        "document_id": "example",
+        "content": "6\n板中单根无粘结预应力筋的间距不宜大于板厚的6倍，\n且不宜大于1m; 带状束的无粘结预应力筋根数不宜多于5根，\n带状束间距不宜大于板厚的12倍，且不宜大于2.4m。\n",
+        "score": 51.817787,
+        "rank": 7,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "4\n当有可靠经验并能保证混凝土浇筑质量时，预留孔道可"
+        ],
+        "page_start": 172,
+        "page_end": 172,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p172_block_3"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 4\n当有可靠经验并能保证混凝土浇筑质量时，预留孔道可",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "4\n当有可靠经验并能保证混凝土浇筑质量时，预留孔道可",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "a5b54e618a36e3a4c830b36c",
+        "document_id": "example",
+        "content": "9.1.3\n板中受力钢筋的间距，当板厚不大于150mm 时不宜大\n于200mm; 当板厚大于150mm 时不宜大于板厚的1.5倍，且不\n宜大于250mm。\n",
+        "score": 51.520294,
+        "rank": 8,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2\n现浇钢筋混凝土板的厚度不应小于表9.1.2规定的数值。"
+        ],
+        "page_start": 127,
+        "page_end": 127,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p127_block_12"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2\n现浇钢筋混凝土板的厚度不应小于表9.1.2规定的数值。",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2\n现浇钢筋混凝土板的厚度不应小于表9.1.2规定的数值。",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "77771846be0899613f2c1c8d",
+        "document_id": "example",
+        "content": "规范还规定了框架梁下部纵向钢筋在端节点处的锚固要求。\n9.3.5\n本条为框架中间层中间节点梁纵筋的配筋构造要求。\n中间层中间节点的梁下部纵向钢筋，修订提出了宜贯穿节点\n与支座的要求，当需要锚固时其在节点中的锚固要求仍沿用原规\n范有关梁纵向钢筋在不同受力情况下锚固的规定。中间层端节\n点、顶层中间节点以及顶层端节点处的梁下部纵向钢筋，也可按\n同样的方法锚固。\n",
+        "score": 50.783,
+        "rank": 9,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "9\n结构构件的基本规定",
+          "9.3\n柱、梁柱节点及牛腿"
+        ],
+        "page_start": 368,
+        "page_end": 368,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p368_block_2"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 9\n结构构件的基本规定\n> 9.3\n柱、梁柱节点及牛腿",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "9\n结构构件的基本规定",
+        "section": "9.3\n柱、梁柱节点及牛腿",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "bf4df671361ff75e89676992",
+        "document_id": "example",
+        "content": "10.3.1\n根据先张法预应力筋的锚固及预应力传递性能，提出了\n配筋净间距的要求，其数值是根据试验研究及工程经验确定的。\n根据多年来的工程经验，为确保预制构件的耐久性，适当增加了\n预应力筋净间距的限值。\n",
+        "score": 49.93038,
+        "rank": 10,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "10\n预应力混凝土结构构件",
+          "10.3\n预应力混凝土构造规定"
+        ],
+        "page_start": 386,
+        "page_end": 386,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p386_block_4"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 10\n预应力混凝土结构构件\n> 10.3\n预应力混凝土构造规定",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "10\n预应力混凝土结构构件",
+        "section": "10.3\n预应力混凝土构造规定",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      }
+    ]
+  },
+  {
+    "query_id": "example-concept",
+    "query": "什么是深梁？",
+    "query_type": "concept",
+    "relevant": [
+      {
+        "document_id": "example-document",
+        "clause_number": "2.1.2",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      {
+        "document_id": "example-document",
+        "clause_number": "G.0.1",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      {
+        "document_id": "example-document",
+        "clause_number": "G.0.7",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      }
+    ],
+    "metrics": {
+      "Recall@1": 0.0,
+      "Precision@1": 0.0,
+      "HitRate@1": 0.0,
+      "Recall@3": 0.0,
+      "Precision@3": 0.0,
+      "HitRate@3": 0.0,
+      "Recall@5": 0.0,
+      "Precision@5": 0.0,
+      "HitRate@5": 0.0,
+      "Recall@10": 0.0,
+      "Precision@10": 0.0,
+      "HitRate@10": 0.0,
+      "MRR@5": 0.0,
+      "nDCG@5": 0.0,
+      "MRR@10": 0.0,
+      "nDCG@10": 0.0
+    },
+    "results": [
+      {
+        "chunk_id": "bec5374ce26f68bd333aa567",
+        "document_id": "example",
+        "content": "应注意的是，由于深梁中水平及竖向分布钢筋对受剪承载力\n",
+        "score": 33.37403,
+        "rank": 1,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "附录 G"
+        ],
+        "page_start": 426,
+        "page_end": 426,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p426_block_6"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 附录 G",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "附录 G",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "470cb2cd0dd3297b2b7fe579",
+        "document_id": "example",
+        "content": "律随深梁的跨高比变化，由此确定深梁的配筋分布。\n",
+        "score": 32.758156,
+        "rank": 2,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "附录 G"
+        ],
+        "page_start": 426,
+        "page_end": 426,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p426_block_20"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 附录 G",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "附录 G",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "13166c42d3b18695a0bc7024",
+        "document_id": "example",
+        "content": "弯起或截断。在简支单跨深梁支座及连续深梁梁端的简支支座\n",
+        "score": 32.630623,
+        "rank": 3,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2 －－..、、"
+        ],
+        "page_start": 256,
+        "page_end": 256,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p256_block_1"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2 －－..、、",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2 －－..、、",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "a9d4e90250312dc263c16952",
+        "document_id": "example",
+        "content": "2. 1. 12 \n深梁\ndeep beam \n",
+        "score": 31.948086,
+        "rank": 4,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2 \n术语和符号",
+          "2.1\n术语"
+        ],
+        "page_start": 18,
+        "page_end": 18,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p18_block_5"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2 \n术语和符号\n> 2.1\n术语",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2 \n术语和符号",
+        "section": "2.1\n术语",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "b7e71320e344621f0fc9bacf",
+        "document_id": "example",
+        "content": "G.O. 7\n为了保证深梁平面外的稳定性，本条对深梁的高厚比\n",
+        "score": 31.73108,
+        "rank": 5,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "附录 G"
+        ],
+        "page_start": 426,
+        "page_end": 426,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p426_block_16"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 附录 G",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "附录 G",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "ec17f64f20870fab7f703566",
+        "document_id": "example",
+        "content": "时，宜将柱伸至深梁顶。深梁顶部应与楼板等水平构件可靠\n",
+        "score": 31.73108,
+        "rank": 6,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "附录 G"
+        ],
+        "page_start": 254,
+        "page_end": 254,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p254_block_9"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 附录 G",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "附录 G",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "d883dde6d6ca6e97d9db3306",
+        "document_id": "example",
+        "content": "eo \n荷载准永久组合下的初始偏心距，取为Mq/N什\n",
+        "score": 30.93511,
+        "rank": 7,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "3 ）受弯构件"
+        ],
+        "page_start": 107,
+        "page_end": 107,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p107_block_11"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 3 ）受弯构件",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "3 ）受弯构件",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "ce7cf3614e1efc129acdf9f3",
+        "document_id": "example",
+        "content": "向弯钩很可能引起深梁支座区沿深梁中面的劈裂，故钢筋锚固端\n",
+        "score": 30.766453,
+        "rank": 8,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "附录 G"
+        ],
+        "page_start": 427,
+        "page_end": 427,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p427_block_12"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 附录 G",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "附录 G",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "44a90c36785803c5f237ad08",
+        "document_id": "example",
+        "content": "承深梁的柱伸到深梁顶部能够有效地降低支座传力面发生局部受\n",
+        "score": 30.457811,
+        "rank": 9,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "附录 G"
+        ],
+        "page_start": 426,
+        "page_end": 426,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p426_block_14"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 附录 G",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "附录 G",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "48f865ee9bb1235c823376f8",
+        "document_id": "example",
+        "content": "附录加以区别，作出专门的规定。\nG.0.1 \n对于深梁的内力分析，简支深梁与一般梁相同，但连续\n",
+        "score": 29.61773,
+        "rank": 10,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "附录 G"
+        ],
+        "page_start": 425,
+        "page_end": 425,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p425_block_4"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 附录 G",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "附录 G",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      }
+    ]
+  },
+  {
+    "query_id": "example-formula",
+    "query": "示例公式是什么？",
+    "query_type": "formula",
+    "relevant": [
+      {
+        "document_id": "example-document",
+        "clause_number": "3.0.1",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": "formula",
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      }
+    ],
+    "metrics": {
+      "Recall@1": 0.0,
+      "Precision@1": 0.0,
+      "HitRate@1": 0.0,
+      "Recall@3": 0.0,
+      "Precision@3": 0.0,
+      "HitRate@3": 0.0,
+      "Recall@5": 0.0,
+      "Precision@5": 0.0,
+      "HitRate@5": 0.0,
+      "Recall@10": 0.0,
+      "Precision@10": 0.0,
+      "HitRate@10": 0.0,
+      "MRR@5": 0.0,
+      "nDCG@5": 0.0,
+      "MRR@10": 0.0,
+      "nDCG@10": 0.0
+    },
+    "results": [
+      {
+        "chunk_id": "3e26a6ede1ac62026ae400b4",
+        "document_id": "example",
+        "content": "F.O. 1 中所示的几何尺寸，可接下列公式计算：\n",
+        "score": 35.433056,
+        "rank": 1,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "3 \n当考虑不同的荷载组合时，应取其中的较大值作为板柱"
+        ],
+        "page_start": 249,
+        "page_end": 249,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p249_block_22"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 3 \n当考虑不同的荷载组合时，应取其中的较大值作为板柱",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "3 \n当考虑不同的荷载组合时，应取其中的较大值作为板柱",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "6119ca06aa0ad2e93f2aadef",
+        "document_id": "example",
+        "content": "(F.0.2-10 ）、公式\nCF.0.2-14 ）中略去了a,h6/12 项，这表示忽\n",
+        "score": 34.262043,
+        "rank": 2,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2 \n由节点受剪传递不平衡弯矩而在临界截面上产生的最大"
+        ],
+        "page_start": 424,
+        "page_end": 424,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p424_block_19"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2 \n由节点受剪传递不平衡弯矩而在临界截面上产生的最大",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2 \n由节点受剪传递不平衡弯矩而在临界截面上产生的最大",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "520d9ee6a3a4013636cbe808",
+        "document_id": "example",
+        "content": "计算公式。该公式是在非抗震偏心受拉构件受剪承载力计算公式\n",
+        "score": 32.91704,
+        "rank": 3,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "02 版规范的柱抗弯能力增强措施作相应加强。具体做法是：对9"
+        ],
+        "page_start": 401,
+        "page_end": 401,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p401_block_10"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 02 版规范的柱抗弯能力增强措施作相应加强。具体做法是：对9",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "02 版规范的柱抗弯能力增强措施作相应加强。具体做法是：对9",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "e47e0dc56e25fed445bcd144",
+        "document_id": "example",
+        "content": "CE.0.36 ）及公式\nCE. o. 4-1) ～公式\nCE. o. 4一的是将沿截面梯\n",
+        "score": 31.9605,
+        "rank": 4,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "附录 E"
+        ],
+        "page_start": 423,
+        "page_end": 423,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p423_block_20"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 附录 E",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "附录 E",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "2cca874f29aecb81af43b61c",
+        "document_id": "example",
+        "content": "计算公式，但并不表示设计的梁不需配置箍筋。考虑到剪切破坏\n",
+        "score": 31.17152,
+        "rank": 5,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "4\n这里应当说明，以上虽然分析了无腹筋梁受剪承载力的"
+        ],
+        "page_start": 324,
+        "page_end": 324,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p324_block_19"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 4\n这里应当说明，以上虽然分析了无腹筋梁受剪承载力的",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "4\n这里应当说明，以上虽然分析了无腹筋梁受剪承载力的",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "d883dde6d6ca6e97d9db3306",
+        "document_id": "example",
+        "content": "eo \n荷载准永久组合下的初始偏心距，取为Mq/N什\n",
+        "score": 30.93511,
+        "rank": 6,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "3 ）受弯构件"
+        ],
+        "page_start": 107,
+        "page_end": 107,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p107_block_11"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 3 ）受弯构件",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "3 ）受弯构件",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "578262af9ce15aeb8b310bb6",
+        "document_id": "example",
+        "content": "式(6.2.25-1)是89规范在条文说明中提出的公式。\n",
+        "score": 30.748856,
+        "rank": 7,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2\n对称配筋小偏心受压的钢筋混凝土构件近似计算方法："
+        ],
+        "page_start": 323,
+        "page_end": 323,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p323_block_5"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2\n对称配筋小偏心受压的钢筋混凝土构件近似计算方法：",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2\n对称配筋小偏心受压的钢筋混凝土构件近似计算方法：",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "ffc5453d4126a47f3a7055cd",
+        "document_id": "example",
+        "content": "中，可能是按图F. 0. 1 所示的临界截面周长，也可能是如中柱\n",
+        "score": 30.270206,
+        "rank": 8,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2 \n由节点受剪传递不平衡弯矩而在临界截面上产生的最大"
+        ],
+        "page_start": 424,
+        "page_end": 424,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p424_block_22"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2 \n由节点受剪传递不平衡弯矩而在临界截面上产生的最大",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2 \n由节点受剪传递不平衡弯矩而在临界截面上产生的最大",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "f8df02cad114565741c3c6a0",
+        "document_id": "example",
+        "content": "公式（7.1.49 ）就是基于上述的假定给出的。\n",
+        "score": 29.98549,
+        "rank": 9,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "3 \n对预应力混凝土构件的纵向受拉钢筋等效应力，是指在"
+        ],
+        "page_start": 345,
+        "page_end": 345,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p345_block_1"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 3 \n对预应力混凝土构件的纵向受拉钢筋等效应力，是指在",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "3 \n对预应力混凝土构件的纵向受拉钢筋等效应力，是指在",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "6f9ff5121bd5abeccc6ee4a5",
+        "document_id": "example",
+        "content": "式（6. 2. 25 1) 是89 规范在条文说明中提出的公式。\n",
+        "score": 29.84325,
+        "rank": 10,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "3 \n当需要考虑二阶弯矩的影响时，给出的弯矩设计值"
+        ],
+        "page_start": 323,
+        "page_end": 323,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p323_block_5"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 3 \n当需要考虑二阶弯矩的影响时，给出的弯矩设计值",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "3 \n当需要考虑二阶弯矩的影响时，给出的弯矩设计值",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      }
+    ]
+  },
+  {
+    "query_id": "example-colloquial",
+    "query": "这个东西平时怎么算？",
+    "query_type": "colloquial",
+    "relevant": [
+      {
+        "document_id": "example-document",
+        "clause_number": "3.0.2",
+        "is_explanation": false,
+        "relevance": 1,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      }
+    ],
+    "metrics": {
+      "Recall@1": 0.0,
+      "Precision@1": 0.0,
+      "HitRate@1": 0.0,
+      "Recall@3": 0.0,
+      "Precision@3": 0.0,
+      "HitRate@3": 0.0,
+      "Recall@5": 0.0,
+      "Precision@5": 0.0,
+      "HitRate@5": 0.0,
+      "Recall@10": 0.0,
+      "Precision@10": 0.0,
+      "HitRate@10": 0.0,
+      "MRR@5": 0.0,
+      "nDCG@5": 0.0,
+      "MRR@10": 0.0,
+      "nDCG@10": 0.0
+    },
+    "results": [
+      {
+        "chunk_id": "7690673b1806806bfe41c2a6",
+        "document_id": "example",
+        "content": "李云贵李东彬叶列平李杰\n傅剑平王铁成刘立新邱洪兴\n",
+        "score": 36.299793,
+        "rank": 1,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2002 同时废止。"
+        ],
+        "page_start": 7,
+        "page_end": 7,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p7_block_24"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2002 同时废止。",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2002 同时废止。",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "3c20e71d95b2a47a4ecae464",
+        "document_id": "example",
+        "content": "当不平衡弯矩作用平面与柱矩形截面两个轴线之一相重合\n时，可按下列两种情况进行计算：\n",
+        "score": 32.936092,
+        "rank": 2,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "1\n传递单向不平衡弯矩的板柱节点"
+        ],
+        "page_start": 247,
+        "page_end": 247,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p247_block_4"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 1\n传递单向不平衡弯矩的板柱节点",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "1\n传递单向不平衡弯矩的板柱节点",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "d13524e4d2132fefc7f1afe1",
+        "document_id": "example",
+        "content": "东南大学\n",
+        "score": 32.25641,
+        "rank": 3,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2002 同时废止。"
+        ],
+        "page_start": 7,
+        "page_end": 7,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p7_block_5"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2002 同时废止。",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2002 同时废止。",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "f1fcc94eb185b782770d8bbe",
+        "document_id": "example",
+        "content": "西安建筑科技大学\n",
+        "score": 30.760576,
+        "rank": 4,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2002 同时废止。"
+        ],
+        "page_start": 7,
+        "page_end": 7,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p7_block_11"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2002 同时废止。",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2002 同时废止。",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "a31b4ceacb9347ac587e27c8",
+        "document_id": "example",
+        "content": "当有平行的几个孔道，且中心距不大于2dp 时，预应力筋的\n",
+        "score": 30.294397,
+        "rank": 5,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "5 \n当构件端部预应力筋需集中布置在截面下部或集中布置"
+        ],
+        "page_start": 175,
+        "page_end": 175,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p175_block_20"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 5 \n当构件端部预应力筋需集中布置在截面下部或集中布置",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "5 \n当构件端部预应力筋需集中布置在截面下部或集中布置",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "4d66c3f115efaf04d4a75e5a",
+        "document_id": "example",
+        "content": "(6. 2. 19 3 ）、公式（6. 2. 19-4 ）这两个简化公式。\n",
+        "score": 29.927757,
+        "rank": 6,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "3\n本次对偏心受压构件二阶效应的计算方法进行了修订，"
+        ],
+        "page_start": 322,
+        "page_end": 322,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p322_block_5"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 3\n本次对偏心受压构件二阶效应的计算方法进行了修订，",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "3\n本次对偏心受压构件二阶效应的计算方法进行了修订，",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "de8e0176f53063746c75b404",
+        "document_id": "example",
+        "content": "中国建筑西南设计研究院\n",
+        "score": 28.969286,
+        "rank": 7,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2002 同时废止。"
+        ],
+        "page_start": 7,
+        "page_end": 7,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p7_block_17"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2002 同时废止。",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2002 同时废止。",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "3739dd7c09a813ca253c2ab4",
+        "document_id": "example",
+        "content": "两个方向配筋的截面有效高度平均值；\n",
+        "score": 26.9821,
+        "rank": 8,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "1 \n冲切破坏锥体最不利一侧的斜截面；2→冲切破坏锥体的底面线"
+        ],
+        "page_start": 92,
+        "page_end": 92,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p92_block_3"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 1 \n冲切破坏锥体最不利一侧的斜截面；2→冲切破坏锥体的底面线",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "1 \n冲切破坏锥体最不利一侧的斜截面；2→冲切破坏锥体的底面线",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "76b701669931899585a543cb",
+        "document_id": "example",
+        "content": "华东建筑设计研究院有限公司\n",
+        "score": 26.83182,
+        "rank": 9,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2015\n北京"
+        ],
+        "page_start": 4,
+        "page_end": 4,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p4_block_18"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2015\n北京",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2015\n北京",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "961266411ad7433628f51811",
+        "document_id": "example",
+        "content": "华东建筑设计研究院有限公司\n",
+        "score": 26.83182,
+        "rank": 10,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2002 同时废止。"
+        ],
+        "page_start": 7,
+        "page_end": 7,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p7_block_16"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2002 同时废止。",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2002 同时废止。",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      }
+    ]
+  },
+  {
+    "query_id": "example-synonym",
+    "query": "示例同义表达",
+    "query_type": "synonym",
+    "relevant": [
+      {
+        "document_id": "example-document",
+        "clause_number": "4.0.1",
+        "is_explanation": false,
+        "relevance": 1,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      }
+    ],
+    "metrics": {
+      "Recall@1": 0.0,
+      "Precision@1": 0.0,
+      "HitRate@1": 0.0,
+      "Recall@3": 0.0,
+      "Precision@3": 0.0,
+      "HitRate@3": 0.0,
+      "Recall@5": 0.0,
+      "Precision@5": 0.0,
+      "HitRate@5": 0.0,
+      "Recall@10": 0.0,
+      "Precision@10": 0.0,
+      "HitRate@10": 0.0,
+      "MRR@5": 0.0,
+      "nDCG@5": 0.0,
+      "MRR@10": 0.0,
+      "nDCG@10": 0.0
+    },
+    "results": [
+      {
+        "chunk_id": "5c157c7315044c37b56eb636",
+        "document_id": "example",
+        "content": "印2 表示。\n",
+        "score": 36.768063,
+        "rank": 1,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "3 ）。"
+        ],
+        "page_start": 319,
+        "page_end": 319,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p319_block_23"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 3 ）。",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "3 ）。",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "a2f7f98fa3b028d8cf6cf4a3",
+        "document_id": "example",
+        "content": "筋的强化强度，同时，也表示设计采用的钢筋的极限拉应变不得\n",
+        "score": 34.374065,
+        "rank": 2,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "3 \n纵向受拉钢筋的极限拉应变"
+        ],
+        "page_start": 317,
+        "page_end": 317,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p317_block_26"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 3 \n纵向受拉钢筋的极限拉应变",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "3 \n纵向受拉钢筋的极限拉应变",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "1be17fe5f1215a59aeef2b62",
+        "document_id": "example",
+        "content": "来表示；同时给出了截面高度的适用范围，当截面有效高度超过\n",
+        "score": 34.374065,
+        "rank": 3,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2 \n综合国内外的试验结果和规范规定，对不配置箍筋和弯"
+        ],
+        "page_start": 324,
+        "page_end": 324,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p324_block_6"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2 \n综合国内外的试验结果和规范规定，对不配置箍筋和弯",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2 \n综合国内外的试验结果和规范规定，对不配置箍筋和弯",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "04c9bfd4b5cc7bcf19847808",
+        "document_id": "example",
+        "content": "表达。\n",
+        "score": 33.557484,
+        "rank": 4,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "02 版规范的柱抗弯能力增强措施作相应加强。具体做法是：对9"
+        ],
+        "page_start": 401,
+        "page_end": 401,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p401_block_21"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 02 版规范的柱抗弯能力增强措施作相应加强。具体做法是：对9",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "02 版规范的柱抗弯能力增强措施作相应加强。具体做法是：对9",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "e90b0d9cb657cee138d5239c",
+        "document_id": "example",
+        "content": "不同高度范围内的分配比例\n",
+        "score": 33.34703,
+        "rank": 5,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "附录 G",
+          "4.3\n2A,/3"
+        ],
+        "page_start": 255,
+        "page_end": 255,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p255_block_12"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 附录 G\n> 4.3\n2A,/3",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "附录 G",
+        "section": "4.3\n2A,/3",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "c286647514ec2e3c8de7b366",
+        "document_id": "example",
+        "content": "不同高度范围内的分配比例\n",
+        "score": 33.34703,
+        "rank": 6,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2 －－..、、"
+        ],
+        "page_start": 255,
+        "page_end": 255,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p255_block_29"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2 －－..、、",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2 －－..、、",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "ca9c80b6ffe5f2a700cab1d9",
+        "document_id": "example",
+        "content": "表达式：\n",
+        "score": 32.786346,
+        "rank": 7,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "5 \n对于可能遭受偶然作用，且倒塌可能引起严重后果的重"
+        ],
+        "page_start": 24,
+        "page_end": 24,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p24_block_10"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 5 \n对于可能遭受偶然作用，且倒塌可能引起严重后果的重",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "5 \n对于可能遭受偶然作用，且倒塌可能引起严重后果的重",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "7b5ef310aa6d01132fca4db8",
+        "document_id": "example",
+        "content": "的符号表达。\n",
+        "score": 31.345728,
+        "rank": 8,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2 \n轴心抗拉强度设计值f,",
+          "4.2\n钢筋"
+        ],
+        "page_start": 302,
+        "page_end": 302,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p302_block_17"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2 \n轴心抗拉强度设计值f,\n> 4.2\n钢筋",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2 \n轴心抗拉强度设计值f,",
+        "section": "4.2\n钢筋",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "cd28aa12b53d22efc93b6710",
+        "document_id": "example",
+        "content": "达。表8.3.\n1 中不同外形钢筋的锚固外形系数α 是经对各类钢筋\n",
+        "score": 31.216373,
+        "rank": 9,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "6 \n为保证基础钢筋的耐久性，根据工程经验基础底面要求",
+          "8.3\n钢筋的锚固"
+        ],
+        "page_start": 353,
+        "page_end": 353,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p353_block_24"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 6 \n为保证基础钢筋的耐久性，根据工程经验基础底面要求\n> 8.3\n钢筋的锚固",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "6 \n为保证基础钢筋的耐久性，根据工程经验基础底面要求",
+        "section": "8.3\n钢筋的锚固",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "a36764cb5687f2170d7a3bfc",
+        "document_id": "example",
+        "content": "表11. 1. 3 的另一重含义是，表中列出的结构类型也是根据\n",
+        "score": 30.625534,
+        "rank": 10,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "5 \n根据近年来的工程实践经验，明确了当框架－核心筒结构"
+        ],
+        "page_start": 392,
+        "page_end": 392,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p392_block_3"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 5 \n根据近年来的工程实践经验，明确了当框架－核心筒结构",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "5 \n根据近年来的工程实践经验，明确了当框架－核心筒结构",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      }
+    ]
+  },
+  {
+    "query_id": "example-multi-clause",
+    "query": "哪些示例条文共同适用？",
+    "query_type": "multi_clause",
+    "relevant": [
+      {
+        "document_id": "example-document",
+        "clause_number": "5.0.1",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      {
+        "document_id": "example-document",
+        "clause_number": "5.0.2",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      }
+    ],
+    "metrics": {
+      "Recall@1": 0.0,
+      "Precision@1": 0.0,
+      "HitRate@1": 0.0,
+      "Recall@3": 0.0,
+      "Precision@3": 0.0,
+      "HitRate@3": 0.0,
+      "Recall@5": 0.0,
+      "Precision@5": 0.0,
+      "HitRate@5": 0.0,
+      "Recall@10": 0.0,
+      "Precision@10": 0.0,
+      "HitRate@10": 0.0,
+      "MRR@5": 0.0,
+      "nDCG@5": 0.0,
+      "MRR@10": 0.0,
+      "nDCG@10": 0.0
+    },
+    "results": [
+      {
+        "chunk_id": "8147c96ede73c52f3ad2e88e",
+        "document_id": "example",
+        "content": "本规范条文下划线部分为修改的内容；用黑体字表示的条文\n",
+        "score": 54.303276,
+        "rank": 1,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2015\n北京"
+        ],
+        "page_start": 4,
+        "page_end": 4,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p4_block_11"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2015\n北京",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2015\n北京",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "1ed5e3a31e569a771e09985c",
+        "document_id": "example",
+        "content": "此次局部修订，共涉及9个条文的修改，分别为第4.2.1\n条、第4.2.2条、第4.2.3条、第4.2.4条、第4.2.5条、第\n9.3.2条、第9.7.6条、第11.7.11条和第G.0.12 条。\n本规范条文下划线部分为修改的内容；用黑体字表示的条文\n为强制性条文，必须严格执行。\n",
+        "score": 52.510754,
+        "rank": 2,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [],
+        "page_start": 4,
+        "page_end": 4,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p4_block_4"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": null,
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "1be17fe5f1215a59aeef2b62",
+        "document_id": "example",
+        "content": "来表示；同时给出了截面高度的适用范围，当截面有效高度超过\n",
+        "score": 43.097015,
+        "rank": 3,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2 \n综合国内外的试验结果和规范规定，对不配置箍筋和弯"
+        ],
+        "page_start": 324,
+        "page_end": 324,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p324_block_6"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2 \n综合国内外的试验结果和规范规定，对不配置箍筋和弯",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2 \n综合国内外的试验结果和规范规定，对不配置箍筋和弯",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "371e3f7745e8b5b4dbc3566d",
+        "document_id": "example",
+        "content": "条文，自发布之日起实施。经此次修改的原条文同时废止。\n",
+        "score": 42.996044,
+        "rank": 4,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2015\n北京"
+        ],
+        "page_start": 3,
+        "page_end": 3,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p3_block_6"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2015\n北京",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2015\n北京",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "9108399e43dcba12f1c71284",
+        "document_id": "example",
+        "content": "F.0.2 、\nF.0.3\n条文中提供了图F. 0. 1 所示的中柱、边柱和角\n",
+        "score": 41.38295,
+        "rank": 5,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2 \n由节点受剪传递不平衡弯矩而在临界截面上产生的最大"
+        ],
+        "page_start": 424,
+        "page_end": 424,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p424_block_14"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2 \n由节点受剪传递不平衡弯矩而在临界截面上产生的最大",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2 \n由节点受剪传递不平衡弯矩而在临界截面上产生的最大",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "2cd4cea7ac74f01dec7c94dd",
+        "document_id": "example",
+        "content": "此次局部修订，共涉及9 个条文的修改，分别为第\n4. 2. 1 \n",
+        "score": 40.84194,
+        "rank": 6,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2015\n北京"
+        ],
+        "page_start": 4,
+        "page_end": 4,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p4_block_8"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2015\n北京",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2015\n北京",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "94db272df0daac4b123c5ea0",
+        "document_id": "example",
+        "content": "柱承载力的影响。\n6.4.17 \n本条给出了在轴向拉力、弯矩、剪力和扭矩共同作用\n",
+        "score": 37.203133,
+        "rank": 7,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2 \n钢筋部分承担的扭矩"
+        ],
+        "page_start": 333,
+        "page_end": 333,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p333_block_17"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2 \n钢筋部分承担的扭矩",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2 \n钢筋部分承担的扭矩",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "2b3ed081c2e14c3a19f721f5",
+        "document_id": "example",
+        "content": "取1. 0 0 \ns \n同本规范第6. 4.4 条。\n6.4.7 在轴向压力和扭矩共同作用下的矩形截面钢筋温凝土构\n",
+        "score": 36.510612,
+        "rank": 8,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "3 \n受拉翼缘"
+        ],
+        "page_start": 83,
+        "page_end": 83,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p83_block_14"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 3 \n受拉翼缘",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "3 \n受拉翼缘",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "ce096ac2903d88277aff7bb0",
+        "document_id": "example",
+        "content": "于0. 3fcA 时，取0. 3fcA; \ns \n同本规范第6. 4. 4 条。\n6.4.8 在剪力和扭矩共同作用下的矩形截面剪扭构件，其受剪\n",
+        "score": 35.68582,
+        "rank": 9,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "3 \n受拉翼缘"
+        ],
+        "page_start": 83,
+        "page_end": 83,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p83_block_19"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 3 \n受拉翼缘",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "3 \n受拉翼缘",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "58b8fd190021b93b0c1cfaef",
+        "document_id": "example",
+        "content": "现批准《混凝土结构设计规范》GB 50010-2010局部修订的\n条文，自发布之日起实施。经此次修改的原条文同时废止。\n",
+        "score": 35.164455,
+        "rank": 10,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [],
+        "page_start": 3,
+        "page_end": 3,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p3_block_5"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": null,
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      }
+    ]
+  },
+  {
+    "query_id": "example-explanation",
+    "query": "为什么作出这项示例规定？",
+    "query_type": "explanation",
+    "relevant": [
+      {
+        "document_id": "example-document",
+        "clause_number": "6.0.1",
+        "is_explanation": true,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      }
+    ],
+    "metrics": {
+      "Recall@1": 0.0,
+      "Precision@1": 0.0,
+      "HitRate@1": 0.0,
+      "Recall@3": 0.0,
+      "Precision@3": 0.0,
+      "HitRate@3": 0.0,
+      "Recall@5": 0.0,
+      "Precision@5": 0.0,
+      "HitRate@5": 0.0,
+      "Recall@10": 0.0,
+      "Precision@10": 0.0,
+      "HitRate@10": 0.0,
+      "MRR@5": 0.0,
+      "nDCG@5": 0.0,
+      "MRR@10": 0.0,
+      "nDCG@10": 0.0
+    },
+    "results": [
+      {
+        "chunk_id": "f63ff06bda2387100c2f4b1a",
+        "document_id": "example",
+        "content": "作强制规定。\n9.4.2 本条提出墙双排配筋及配置拉结筋的要求。这是为了保\n",
+        "score": 47.27214,
+        "rank": 1,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "4 的竖向构件定义为墙，比例不大于4 的则应按柱进行设计。"
+        ],
+        "page_start": 371,
+        "page_end": 371,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p371_block_11"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 4 的竖向构件定义为墙，比例不大于4 的则应按柱进行设计。",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "4 的竖向构件定义为墙，比例不大于4 的则应按柱进行设计。",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "6119ca06aa0ad2e93f2aadef",
+        "document_id": "example",
+        "content": "(F.0.2-10 ）、公式\nCF.0.2-14 ）中略去了a,h6/12 项，这表示忽\n",
+        "score": 47.09613,
+        "rank": 2,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2 \n由节点受剪传递不平衡弯矩而在临界截面上产生的最大"
+        ],
+        "page_start": 424,
+        "page_end": 424,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p424_block_19"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2 \n由节点受剪传递不平衡弯矩而在临界截面上产生的最大",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2 \n由节点受剪传递不平衡弯矩而在临界截面上产生的最大",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "e12cf9f35c8331cf68448629",
+        "document_id": "example",
+        "content": "作出了规定。\n",
+        "score": 42.964584,
+        "rank": 3,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "9 \n结构构件的基本规定",
+          "9.1\n板"
+        ],
+        "page_start": 361,
+        "page_end": 361,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p361_block_2"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 9 \n结构构件的基本规定\n> 9.1\n板",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "9 \n结构构件的基本规定",
+        "section": "9.1\n板",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "749c43b144bf3be29cd33e88",
+        "document_id": "example",
+        "content": "4)表示有选择，在一定条件下可以这样做的，采用\n“可”。\n2 规范中指定应按其他有关标准、规范执行时，写法为：\n“应符合……的规定”或“应按……执行”。\n",
+        "score": 40.808125,
+        "rank": 4,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2\n受压区纵向预应力筋的预应力损失终极值o5",
+          "1.00"
+        ],
+        "page_start": 275,
+        "page_end": 275,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p275_block_4"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2\n受压区纵向预应力筋的预应力损失终极值o5\n> 1.00",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2\n受压区纵向预应力筋的预应力损失终极值o5",
+        "section": "1.00",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "842f54a9be8f9b842426e693",
+        "document_id": "example",
+        "content": "预应力混凝土结构构件的地震作用效应和其他荷载效应的基\n本组合主要按照现行国家标准《建筑抗震设计规范》GB50011\n的有关规定确定，并加入了预应力作用效应项，预应力作用分项\n系数是参考国内外有关规范作出规定的。\n",
+        "score": 39.474403,
+        "rank": 5,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "1\n将设计轴压比上限值的规定扩展到四级抗震等级；",
+          "11.8\n预应力混凝土结构构件"
+        ],
+        "page_start": 412,
+        "page_end": 412,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p412_block_6"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 1\n将设计轴压比上限值的规定扩展到四级抗震等级；\n> 11.8\n预应力混凝土结构构件",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "1\n将设计轴压比上限值的规定扩展到四级抗震等级；",
+        "section": "11.8\n预应力混凝土结构构件",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "d883dde6d6ca6e97d9db3306",
+        "document_id": "example",
+        "content": "eo \n荷载准永久组合下的初始偏心距，取为Mq/N什\n",
+        "score": 38.965412,
+        "rank": 6,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "3 ）受弯构件"
+        ],
+        "page_start": 107,
+        "page_end": 107,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p107_block_11"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 3 ）受弯构件",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "3 ）受弯构件",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "018725cf9f98678e1fbbcd30",
+        "document_id": "example",
+        "content": "4）表示有选择，在一定条件下可以这样做的，采用\n",
+        "score": 38.561607,
+        "rank": 7,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2 ）表示严格，在正常情况下均应这样做的："
+        ],
+        "page_start": 275,
+        "page_end": 275,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p275_block_9"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2 ）表示严格，在正常情况下均应这样做的：",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2 ）表示严格，在正常情况下均应这样做的：",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "5e687be725911c49a831a134",
+        "document_id": "example",
+        "content": "宽度，这就相当于取梁每侧6 倍板厚作为有效板宽范围。这一规\n",
+        "score": 38.35066,
+        "rank": 8,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "5 \n根据近年来的工程实践经验，明确了当框架－核心筒结构"
+        ],
+        "page_start": 396,
+        "page_end": 396,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p396_block_26"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 5 \n根据近年来的工程实践经验，明确了当框架－核心筒结构",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "5 \n根据近年来的工程实践经验，明确了当框架－核心筒结构",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "fe86ed47b29753915ae109c2",
+        "document_id": "example",
+        "content": "不够，未能作出进一步规定。\n",
+        "score": 37.96065,
+        "rank": 9,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2 \n综合国内外的试验结果和规范规定，对不配置箍筋和弯"
+        ],
+        "page_start": 324,
+        "page_end": 324,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p324_block_8"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2 \n综合国内外的试验结果和规范规定，对不配置箍筋和弯",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2 \n综合国内外的试验结果和规范规定，对不配置箍筋和弯",
+        "section": null,
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      },
+      {
+        "chunk_id": "46232df686088ba6214fde42",
+        "document_id": "example",
+        "content": "施工规范及美国AASHTO 规范作出规定的。\n10.3.13 为保证预应力泪凝土结构的耐久性，提出了对构件端\n",
+        "score": 37.89391,
+        "rank": 10,
+        "standard_name": "混凝土结构设计规范",
+        "standard_code": "GB 50010-2010",
+        "clause_number": null,
+        "section_path": [
+          "2 \n梁正弯矩区普通钢筋的最小面积",
+          "10.3 \n预应力混凝土构造规定"
+        ],
+        "page_start": 389,
+        "page_end": 389,
+        "content_type": "paragraph",
+        "is_mandatory": false,
+        "is_explanation": false,
+        "source_block_ids": [
+          "p389_block_6"
+        ],
+        "context_header": "《混凝土结构设计规范》（GB 50010-2010）\n> 2 \n梁正弯矩区普通钢筋的最小面积\n> 10.3 \n预应力混凝土构造规定",
+        "logical_chunk_id": null,
+        "parent_chunk_id": null,
+        "chapter": "2 \n梁正弯矩区普通钢筋的最小面积",
+        "section": "10.3 \n预应力混凝土构造规定",
+        "table_id": null,
+        "figure_id": null,
+        "formula_id": null
+      }
+    ]
+  }
+]

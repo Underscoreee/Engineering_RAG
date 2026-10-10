@@ -64,10 +64,11 @@ Completed:
 - Task 4: Structure-aware Chunking
 - Task 4.1: Chunking engineering cleanup
 - Task 4.2: Real PDF end-to-end inspection tool
+- Task 4.3: Engineering standard document region filtering
 
 Current:
 
-- Task 5: BM25 + Golden Dataset + Recall@K (not started)
+- Task 5.1: Real structure repair + Golden Dataset validation + BM25 baseline retest
 
 Task-specific constraints for the current task should be defined in the user request.
 

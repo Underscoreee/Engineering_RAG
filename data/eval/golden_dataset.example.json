@@ -1,0 +1,57 @@
+{
+  "version": "example-v1-not-for-quality-claims",
+  "description": "Illustrative records only. Replace every target with judgments from real Chunks and human review before reporting retrieval quality.",
+  "queries": [
+    {
+      "query_id": "example-simple",
+      "query": "示例条文要求是什么？",
+      "query_type": "simple",
+      "relevant": [{"document_id": "example-document", "clause_number": "1.0.1", "is_explanation": false, "relevance": 2}]
+    },
+    {
+      "query_id": "example-limit",
+      "query": "示例限值是多少？",
+      "query_type": "limit",
+      "relevant": [{"document_id": "example-document", "clause_number": "2.0.1", "is_explanation": false, "relevance": 2}]
+    },
+    {
+      "query_id": "example-concept",
+      "query": "示例概念如何定义？",
+      "query_type": "concept",
+      "relevant": [{"document_id": "example-document", "clause_number": "2.0.2", "is_explanation": false, "relevance": 1}]
+    },
+    {
+      "query_id": "example-formula",
+      "query": "示例公式是什么？",
+      "query_type": "formula",
+      "relevant": [{"document_id": "example-document", "clause_number": "3.0.1", "is_explanation": false, "relevance": 2, "content_type": "formula"}]
+    },
+    {
+      "query_id": "example-colloquial",
+      "query": "这个东西平时怎么算？",
+      "query_type": "colloquial",
+      "relevant": [{"document_id": "example-document", "clause_number": "3.0.2", "is_explanation": false, "relevance": 1}]
+    },
+    {
+      "query_id": "example-synonym",
+      "query": "示例同义表达",
+      "query_type": "synonym",
+      "relevant": [{"document_id": "example-document", "clause_number": "4.0.1", "is_explanation": false, "relevance": 1}]
+    },
+    {
+      "query_id": "example-multi-clause",
+      "query": "哪些示例条文共同适用？",
+      "query_type": "multi_clause",
+      "relevant": [
+        {"document_id": "example-document", "clause_number": "5.0.1", "is_explanation": false, "relevance": 2},
+        {"document_id": "example-document", "clause_number": "5.0.2", "is_explanation": false, "relevance": 2}
+      ]
+    },
+    {
+      "query_id": "example-explanation",
+      "query": "为什么作出这项示例规定？",
+      "query_type": "explanation",
+      "relevant": [{"document_id": "example-document", "clause_number": "6.0.1", "is_explanation": true, "relevance": 2}]
+    }
+  ]
+}

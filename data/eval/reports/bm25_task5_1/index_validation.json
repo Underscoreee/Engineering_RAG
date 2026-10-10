@@ -1,0 +1,11 @@
+{
+  "index_name": "engineering_rag_chunks_task5_1_v2",
+  "expected_chunk_count": 1638,
+  "actual_chunk_count": 1638,
+  "expected_fingerprint": "0522c2cb49f8f421ba1f8827edf6a0da5250172ae21c089c85d5e8dce36582e6",
+  "recorded_fingerprint": "0522c2cb49f8f421ba1f8827edf6a0da5250172ae21c089c85d5e8dce36582e6",
+  "expected_mapping_version": "engineering_rag_chunks_v1",
+  "recorded_mapping_version": "engineering_rag_chunks_v1",
+  "is_valid": true,
+  "errors": []
+}

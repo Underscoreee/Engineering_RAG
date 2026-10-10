@@ -1,0 +1,12 @@
+{
+  "notice": "Illustrative qrels only; these are not real annotations or retrieval scores.",
+  "judgments": [
+    {
+      "query_id": "example-simple",
+      "document_id": "example-document",
+      "clause_number": "1.0.1",
+      "is_explanation": false,
+      "relevance": 2
+    }
+  ]
+}

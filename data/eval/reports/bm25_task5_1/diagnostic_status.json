@@ -1,0 +1,6 @@
+{
+  "status": "INVALID_GOLDEN_DATASET",
+  "baseline_status": "NOT_A_VALID_BASELINE",
+  "diagnostic_mode": true,
+  "invalid_targets": 7
+}

@@ -1,0 +1,174 @@
+[
+  {
+    "query_id": "example-simple1",
+    "target_index": 1,
+    "status": "EXPLANATION_MISMATCH",
+    "suggestions": [
+      "Available is_explanation: False"
+    ],
+    "requires_human_review": true
+  },
+  {
+    "query_id": "example-simple2",
+    "target_index": 0,
+    "status": "CLAUSE_NOT_FOUND",
+    "suggestions": [
+      "Nearby clause_number: 9.2.2",
+      "Nearby clause_number: 3.4.2",
+      "Nearby clause_number: 2.2.2",
+      "Nearby clause_number: 6.2.22",
+      "Nearby clause_number: 9.2.9"
+    ],
+    "requires_human_review": true
+  },
+  {
+    "query_id": "example-simple2",
+    "target_index": 1,
+    "status": "CLAUSE_NOT_FOUND",
+    "suggestions": [
+      "Nearby clause_number: 9.2.2",
+      "Nearby clause_number: 3.4.2",
+      "Nearby clause_number: 2.2.2",
+      "Nearby clause_number: 6.2.22",
+      "Nearby clause_number: 9.2.9"
+    ],
+    "requires_human_review": true
+  },
+  {
+    "query_id": "example-limit",
+    "target_index": 0,
+    "status": "CLAUSE_NOT_FOUND",
+    "suggestions": [
+      "Nearby clause_number: 9.1.6",
+      "Nearby clause_number: 9.1.4",
+      "Nearby clause_number: 6.1.3",
+      "Nearby clause_number: 9.2.13",
+      "Nearby clause_number: 9.6.4"
+    ],
+    "requires_human_review": true
+  },
+  {
+    "query_id": "example-concept",
+    "target_index": 0,
+    "status": "CLAUSE_NOT_FOUND",
+    "suggestions": [
+      "Nearby clause_number: 2.2.2",
+      "Nearby clause_number: 9.2.1",
+      "Nearby clause_number: 9.1.6",
+      "Nearby clause_number: 9.1.4",
+      "Nearby clause_number: 8.1.1"
+    ],
+    "requires_human_review": true
+  },
+  {
+    "query_id": "example-concept",
+    "target_index": 1,
+    "status": "CLAUSE_NOT_FOUND",
+    "suggestions": [
+      "Nearby clause_number: 9.2.1",
+      "Nearby clause_number: 8.5.1",
+      "Nearby clause_number: 4.2.1"
+    ],
+    "requires_human_review": true
+  },
+  {
+    "query_id": "example-concept",
+    "target_index": 2,
+    "status": "CLAUSE_NOT_FOUND",
+    "suggestions": [
+      "Nearby clause_number: 4.1.7"
+    ],
+    "requires_human_review": true
+  },
+  {
+    "query_id": "example-formula",
+    "target_index": 0,
+    "status": "CLAUSE_NOT_FOUND",
+    "suggestions": [
+      "Nearby clause_number: 11.1.6",
+      "Nearby clause_number: 11.1.4",
+      "Nearby clause_number: 11.4.17",
+      "Nearby clause_number: 4.1.7",
+      "Nearby clause_number: 11.8.3"
+    ],
+    "requires_human_review": true
+  },
+  {
+    "query_id": "example-formula",
+    "target_index": 1,
+    "status": "CLAUSE_NOT_FOUND",
+    "suggestions": [
+      "Nearby clause_number: 8.5.1",
+      "Nearby clause_number: 8.1.1",
+      "Nearby clause_number: 9.3.10",
+      "Nearby clause_number: 9.2.1",
+      "Nearby clause_number: 4.2.1"
+    ],
+    "requires_human_review": true
+  },
+  {
+    "query_id": "example-colloquial",
+    "target_index": 0,
+    "status": "CLAUSE_NOT_FOUND",
+    "suggestions": [
+      "Nearby clause_number: 3.4.2",
+      "Nearby clause_number: 3.3.2",
+      "Nearby clause_number: 5.6.2",
+      "Nearby clause_number: 3.5.4",
+      "Nearby clause_number: 3.5.3"
+    ],
+    "requires_human_review": true
+  },
+  {
+    "query_id": "example-synonym",
+    "target_index": 0,
+    "status": "CLAUSE_NOT_FOUND",
+    "suggestions": [
+      "Nearby clause_number: 4.2.1",
+      "Nearby clause_number: 9.2.1",
+      "Nearby clause_number: 8.5.1",
+      "Nearby clause_number: 4.2.9",
+      "Nearby clause_number: 4.2.5"
+    ],
+    "requires_human_review": true
+  },
+  {
+    "query_id": "example-multi-clause",
+    "target_index": 0,
+    "status": "CLAUSE_NOT_FOUND",
+    "suggestions": [
+      "Nearby clause_number: 9.2.1",
+      "Nearby clause_number: 8.5.1",
+      "Nearby clause_number: 5.6.3",
+      "Nearby clause_number: 5.6.2",
+      "Nearby clause_number: 5.2.5"
+    ],
+    "requires_human_review": true
+  },
+  {
+    "query_id": "example-multi-clause",
+    "target_index": 1,
+    "status": "CLAUSE_NOT_FOUND",
+    "suggestions": [
+      "Nearby clause_number: 5.6.2",
+      "Nearby clause_number: 5.6.3",
+      "Nearby clause_number: 5.2.5",
+      "Nearby clause_number: 3.4.2",
+      "Nearby clause_number: 3.3.2"
+    ],
+    "requires_human_review": true
+  },
+  {
+    "query_id": "example-explanation",
+    "target_index": 0,
+    "status": "CLAUSE_NOT_FOUND",
+    "suggestions": [
+      "Nearby clause_number: 6.4.14",
+      "Nearby clause_number: 6.2.16",
+      "Nearby clause_number: 9.2.1",
+      "Nearby clause_number: 8.5.1",
+      "Nearby clause_number: 6.2.3"
+    ],
+    "requires_human_review": true
+  }
+]

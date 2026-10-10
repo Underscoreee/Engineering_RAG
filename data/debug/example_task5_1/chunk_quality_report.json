@@ -1,0 +1,17 @@
+{
+  "total_pages": 441,
+  "total_text_blocks": 5672,
+  "total_logical_segments": 6103,
+  "total_structured_blocks": 6103,
+  "clause_blocks": 868,
+  "paragraph_blocks": 4657,
+  "explanation_blocks": 1564,
+  "unknown_blocks": 42,
+  "total_chunks": 1638,
+  "clause_chunks": 517,
+  "paragraph_chunks": 500,
+  "explanation_chunks": 602,
+  "chunks_without_clause_number": 751,
+  "duplicate_chunk_ids": [],
+  "empty_content_chunks": []
+}

@@ -47,7 +47,6 @@ class ClauseGrouper:
         drafts: list[_Draft] = []
         current: _Draft | None = None
         sequence = 0
-        explanation_mode = False
         current_chapter: str | None = None
         current_section: str | None = None
         current_clause: str | None = None
@@ -85,7 +84,6 @@ class ClauseGrouper:
         for block in document.blocks:
             if block.role == StructureRole.EXPLANATION_HEADING:
                 flush()
-                explanation_mode = True
                 current_clause = None
                 continue
 
@@ -95,7 +93,6 @@ class ClauseGrouper:
                     current_chapter = block.chapter or block.text.strip()
                     current_section = None
                     current_clause = None
-                    explanation_mode = False
                 elif block.role == StructureRole.SECTION:
                     current_chapter = block.chapter or current_chapter
                     current_section = block.section or block.text.strip()
@@ -106,7 +103,7 @@ class ClauseGrouper:
             current_section = block.section or current_section
             current_clause = block.clause_number or current_clause
 
-            is_explanation = block.is_explanation or explanation_mode
+            is_explanation = block.is_explanation
             if block.role == StructureRole.CLAUSE:
                 flush()
                 current = new_draft(
@@ -376,6 +373,8 @@ class EngineeringChunker:
         source_ids: list[str] = []
         for block in blocks:
             source_id = f"p{block.page_number}_block_{block.source_block_number}"
+            if block.segment_index:
+                source_id += f"_segment_{block.segment_index}"
             if source_id not in source_ids:
                 source_ids.append(source_id)
         return source_ids

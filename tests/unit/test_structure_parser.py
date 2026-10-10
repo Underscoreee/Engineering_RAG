@@ -112,15 +112,43 @@ def test_hierarchy_path_contains_chapter_section_and_clause() -> None:
     ]
 
 
-def test_explanation_mode_continues_until_new_top_level_heading() -> None:
+def test_explanation_mode_continues_through_new_top_level_heading() -> None:
     result = StructureParser().parse(
         make_document("条文说明", "4.2.3 条文说明……", "第五章 施工", "正文")
     )
 
     assert result.blocks[0].role == StructureRole.EXPLANATION_HEADING
     assert result.blocks[1].is_explanation is True
-    assert result.blocks[2].is_explanation is False
-    assert result.blocks[3].is_explanation is False
+    assert result.blocks[2].is_explanation is True
+    assert result.blocks[3].is_explanation is True
+
+
+def test_clause_hidden_inside_text_block_is_recognized() -> None:
+    result = StructureParser().parse(
+        make_document("上一条正文。\n3.2.2\n本条规定建筑结构应满足要求。")
+    )
+
+    assert [block.role for block in result.blocks] == [
+        StructureRole.PARAGRAPH,
+        StructureRole.CLAUSE,
+    ]
+    assert result.blocks[1].clause_number == "3.2.2"
+    assert result.blocks[1].segment_index == 1
+
+
+def test_multiple_clauses_in_one_text_block_produce_distinct_chunks() -> None:
+    structure = StructureParser().parse(
+        make_document("3.2.2 第一条。\n继续第一条。\n3.2.3 第二条。\n继续第二条。")
+    )
+
+    from engineering_rag.chunking import EngineeringChunker
+
+    chunks = EngineeringChunker().chunk(structure)
+    assert [chunk.clause_number for chunk in chunks] == ["3.2.2", "3.2.3"]
+    assert chunks[0].source_block_ids == ["p1_block_0"]
+    assert chunks[1].source_block_ids == ["p1_block_0_segment_1"]
+    assert chunks[0].content.count("第一条") == 2
+    assert chunks[1].content.count("第二条") == 2
 
 
 @pytest.mark.parametrize("text", ["注：……", "注1：……", "注 2：……"])

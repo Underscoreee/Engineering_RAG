@@ -1,0 +1,85 @@
+[
+  {
+    "query_id": "example-formula",
+    "target_index": 0,
+    "status": "CONTENT_TYPE_MISMATCH",
+    "suggestions": [
+      "Available content_type: clause"
+    ],
+    "requires_human_review": true
+  },
+  {
+    "query_id": "example-formula",
+    "target_index": 1,
+    "status": "CONTENT_TYPE_MISMATCH",
+    "suggestions": [
+      "Available content_type: clause"
+    ],
+    "requires_human_review": true
+  },
+  {
+    "query_id": "example-colloquial",
+    "target_index": 0,
+    "status": "CLAUSE_NOT_FOUND",
+    "suggestions": [
+      "Nearby clause_number: K.0.2",
+      "Nearby clause_number: J.0.2",
+      "Nearby clause_number: H.0.2",
+      "Nearby clause_number: G.0.2",
+      "Nearby clause_number: F.0.2"
+    ],
+    "requires_human_review": true
+  },
+  {
+    "query_id": "example-synonym",
+    "target_index": 0,
+    "status": "CLAUSE_NOT_FOUND",
+    "suggestions": [
+      "Nearby clause_number: K.0.1",
+      "Nearby clause_number: J.0.1",
+      "Nearby clause_number: H.0.1",
+      "Nearby clause_number: G.0.1",
+      "Nearby clause_number: F.0.1"
+    ],
+    "requires_human_review": true
+  },
+  {
+    "query_id": "example-multi-clause",
+    "target_index": 0,
+    "status": "CLAUSE_NOT_FOUND",
+    "suggestions": [
+      "Nearby clause_number: K.0.1",
+      "Nearby clause_number: J.0.1",
+      "Nearby clause_number: H.0.1",
+      "Nearby clause_number: G.0.1",
+      "Nearby clause_number: F.0.1"
+    ],
+    "requires_human_review": true
+  },
+  {
+    "query_id": "example-multi-clause",
+    "target_index": 1,
+    "status": "CLAUSE_NOT_FOUND",
+    "suggestions": [
+      "Nearby clause_number: K.0.2",
+      "Nearby clause_number: J.0.2",
+      "Nearby clause_number: H.0.2",
+      "Nearby clause_number: G.0.2",
+      "Nearby clause_number: F.0.2"
+    ],
+    "requires_human_review": true
+  },
+  {
+    "query_id": "example-explanation",
+    "target_index": 0,
+    "status": "CLAUSE_NOT_FOUND",
+    "suggestions": [
+      "Nearby clause_number: K.0.1",
+      "Nearby clause_number: J.0.1",
+      "Nearby clause_number: H.0.1",
+      "Nearby clause_number: G.0.1",
+      "Nearby clause_number: F.0.1"
+    ],
+    "requires_human_review": true
+  }
+]

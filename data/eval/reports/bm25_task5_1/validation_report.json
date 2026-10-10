@@ -1,0 +1,370 @@
+{
+  "dataset_version": "example-v1-GB500010-2010",
+  "total_queries": 9,
+  "total_targets": 16,
+  "valid_targets": 9,
+  "invalid_targets": 7,
+  "valid_target_coverage": 0.5625,
+  "is_valid": false,
+  "results": [
+    {
+      "query_id": "example-simple1",
+      "target_index": 0,
+      "target": {
+        "document_id": "example",
+        "clause_number": "3.5.4",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      "status": "VALID",
+      "reason": "Matched 1 physical Chunk(s) to one logical source.",
+      "matching_chunk_ids": [
+        "1f80c33634607f560532ffc9"
+      ],
+      "matching_logical_ids": [
+        "eb4fd6c6a852c07a7e726e27"
+      ],
+      "suggestions": []
+    },
+    {
+      "query_id": "example-simple1",
+      "target_index": 1,
+      "target": {
+        "document_id": "example",
+        "clause_number": "3.5.4",
+        "is_explanation": true,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      "status": "VALID",
+      "reason": "Matched 2 physical Chunk(s) to one logical source.",
+      "matching_chunk_ids": [
+        "924bd90d3bb88823c98e0647",
+        "a7c7950252d121585b8cacdc"
+      ],
+      "matching_logical_ids": [
+        "92fa31dd386c804b93a8c619"
+      ],
+      "suggestions": []
+    },
+    {
+      "query_id": "example-simple2",
+      "target_index": 0,
+      "target": {
+        "document_id": "example",
+        "clause_number": "3.2.2",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      "status": "VALID",
+      "reason": "Matched 1 physical Chunk(s) to one logical source.",
+      "matching_chunk_ids": [
+        "090cc3be9df680409ff57e98"
+      ],
+      "matching_logical_ids": [
+        "d9397e7887b634f4eb7f72d9"
+      ],
+      "suggestions": []
+    },
+    {
+      "query_id": "example-simple2",
+      "target_index": 1,
+      "target": {
+        "document_id": "example",
+        "clause_number": "3.2.2",
+        "is_explanation": true,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      "status": "VALID",
+      "reason": "Matched 1 physical Chunk(s) to one logical source.",
+      "matching_chunk_ids": [
+        "3af5be058b143476a40698f0"
+      ],
+      "matching_logical_ids": [
+        "4342de3836444a7d97cfcbd3"
+      ],
+      "suggestions": []
+    },
+    {
+      "query_id": "example-limit",
+      "target_index": 0,
+      "target": {
+        "document_id": "example",
+        "clause_number": "9.1.3",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      "status": "VALID",
+      "reason": "Matched 1 physical Chunk(s) to one logical source.",
+      "matching_chunk_ids": [
+        "7fd6f632db01bd437fdb66aa"
+      ],
+      "matching_logical_ids": [
+        "b8cdc0ce2a177e3d1d82a9d5"
+      ],
+      "suggestions": []
+    },
+    {
+      "query_id": "example-concept",
+      "target_index": 0,
+      "target": {
+        "document_id": "example",
+        "clause_number": "2.1.2",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      "status": "VALID",
+      "reason": "Matched 1 physical Chunk(s) to one logical source.",
+      "matching_chunk_ids": [
+        "ca37beaf69240d269fba46d4"
+      ],
+      "matching_logical_ids": [
+        "5294e574702cd37b24b1882f"
+      ],
+      "suggestions": []
+    },
+    {
+      "query_id": "example-concept",
+      "target_index": 1,
+      "target": {
+        "document_id": "example",
+        "clause_number": "G.0.1",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      "status": "VALID",
+      "reason": "Matched 1 physical Chunk(s) to one logical source.",
+      "matching_chunk_ids": [
+        "1e8b72d62930bed61f1aeb91"
+      ],
+      "matching_logical_ids": [
+        "c2cb31f9ef935ff543542d78"
+      ],
+      "suggestions": []
+    },
+    {
+      "query_id": "example-concept",
+      "target_index": 2,
+      "target": {
+        "document_id": "example",
+        "clause_number": "G.0.7",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      "status": "VALID",
+      "reason": "Matched 1 physical Chunk(s) to one logical source.",
+      "matching_chunk_ids": [
+        "1ffa607684e145cc28b1d6b2"
+      ],
+      "matching_logical_ids": [
+        "bd6e0499928d18c440869a3d"
+      ],
+      "suggestions": []
+    },
+    {
+      "query_id": "example-concept",
+      "target_index": 3,
+      "target": {
+        "document_id": "example",
+        "clause_number": "G.0.8",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      "status": "VALID",
+      "reason": "Matched 1 physical Chunk(s) to one logical source.",
+      "matching_chunk_ids": [
+        "d6f4707331a2b157f27a55b5"
+      ],
+      "matching_logical_ids": [
+        "9791575f7c06fa48961813c1"
+      ],
+      "suggestions": []
+    },
+    {
+      "query_id": "example-formula",
+      "target_index": 0,
+      "target": {
+        "document_id": "example",
+        "clause_number": "11.1.7",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": "formula",
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      "status": "CONTENT_TYPE_MISMATCH",
+      "reason": "The locator exists, but its content_type does not match.",
+      "matching_chunk_ids": [],
+      "matching_logical_ids": [],
+      "suggestions": [
+        "Available content_type: clause"
+      ]
+    },
+    {
+      "query_id": "example-formula",
+      "target_index": 1,
+      "target": {
+        "document_id": "example",
+        "clause_number": "8.3.1",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": "formula",
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      "status": "CONTENT_TYPE_MISMATCH",
+      "reason": "The locator exists, but its content_type does not match.",
+      "matching_chunk_ids": [],
+      "matching_logical_ids": [],
+      "suggestions": [
+        "Available content_type: clause"
+      ]
+    },
+    {
+      "query_id": "example-colloquial",
+      "target_index": 0,
+      "target": {
+        "document_id": "example",
+        "clause_number": "3.0.2",
+        "is_explanation": false,
+        "relevance": 1,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      "status": "CLAUSE_NOT_FOUND",
+      "reason": "clause_number '3.0.2' was not found in the specified document.",
+      "matching_chunk_ids": [],
+      "matching_logical_ids": [],
+      "suggestions": [
+        "Nearby clause_number: K.0.2",
+        "Nearby clause_number: J.0.2",
+        "Nearby clause_number: H.0.2",
+        "Nearby clause_number: G.0.2",
+        "Nearby clause_number: F.0.2"
+      ]
+    },
+    {
+      "query_id": "example-synonym",
+      "target_index": 0,
+      "target": {
+        "document_id": "example",
+        "clause_number": "4.0.1",
+        "is_explanation": false,
+        "relevance": 1,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      "status": "CLAUSE_NOT_FOUND",
+      "reason": "clause_number '4.0.1' was not found in the specified document.",
+      "matching_chunk_ids": [],
+      "matching_logical_ids": [],
+      "suggestions": [
+        "Nearby clause_number: K.0.1",
+        "Nearby clause_number: J.0.1",
+        "Nearby clause_number: H.0.1",
+        "Nearby clause_number: G.0.1",
+        "Nearby clause_number: F.0.1"
+      ]
+    },
+    {
+      "query_id": "example-multi-clause",
+      "target_index": 0,
+      "target": {
+        "document_id": "example",
+        "clause_number": "5.0.1",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      "status": "CLAUSE_NOT_FOUND",
+      "reason": "clause_number '5.0.1' was not found in the specified document.",
+      "matching_chunk_ids": [],
+      "matching_logical_ids": [],
+      "suggestions": [
+        "Nearby clause_number: K.0.1",
+        "Nearby clause_number: J.0.1",
+        "Nearby clause_number: H.0.1",
+        "Nearby clause_number: G.0.1",
+        "Nearby clause_number: F.0.1"
+      ]
+    },
+    {
+      "query_id": "example-multi-clause",
+      "target_index": 1,
+      "target": {
+        "document_id": "example",
+        "clause_number": "5.0.2",
+        "is_explanation": false,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      "status": "CLAUSE_NOT_FOUND",
+      "reason": "clause_number '5.0.2' was not found in the specified document.",
+      "matching_chunk_ids": [],
+      "matching_logical_ids": [],
+      "suggestions": [
+        "Nearby clause_number: K.0.2",
+        "Nearby clause_number: J.0.2",
+        "Nearby clause_number: H.0.2",
+        "Nearby clause_number: G.0.2",
+        "Nearby clause_number: F.0.2"
+      ]
+    },
+    {
+      "query_id": "example-explanation",
+      "target_index": 0,
+      "target": {
+        "document_id": "example",
+        "clause_number": "6.0.1",
+        "is_explanation": true,
+        "relevance": 2,
+        "content_type": null,
+        "logical_chunk_id": null,
+        "source_block_ids": []
+      },
+      "status": "CLAUSE_NOT_FOUND",
+      "reason": "clause_number '6.0.1' was not found in the specified document.",
+      "matching_chunk_ids": [],
+      "matching_logical_ids": [],
+      "suggestions": [
+        "Nearby clause_number: K.0.1",
+        "Nearby clause_number: J.0.1",
+        "Nearby clause_number: H.0.1",
+        "Nearby clause_number: G.0.1",
+        "Nearby clause_number: F.0.1"
+      ]
+    }
+  ]
+}

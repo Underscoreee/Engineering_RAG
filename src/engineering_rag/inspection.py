@@ -52,7 +52,11 @@ def inspect_pdf(
     structure_time_ms = _elapsed_ms(structure_started)
 
     chunk_started = perf_counter()
-    chunker = EngineeringChunker() if max_tokens is None else EngineeringChunker(max_tokens=max_tokens)
+    chunker = (
+        EngineeringChunker()
+        if max_tokens is None
+        else EngineeringChunker(max_tokens=max_tokens)
+    )
     chunks = chunker.chunk(structure)
     chunk_time_ms = _elapsed_ms(chunk_started)
 
@@ -116,6 +120,39 @@ def build_summary(result: InspectionResult) -> dict[str, object]:
     }
 
 
+def build_chunk_quality_report(result: InspectionResult) -> dict[str, object]:
+    """Summarize structural and Chunk integrity without imposing target counts."""
+
+    roles = Counter(block.role.value for block in result.structure.blocks)
+    chunk_types = Counter(chunk.content_type for chunk in result.chunks)
+    chunk_ids = Counter(chunk.chunk_id for chunk in result.chunks)
+    return {
+        "total_pages": result.document.page_count,
+        "total_text_blocks": sum(len(page.blocks) for page in result.document.pages),
+        "total_logical_segments": len(result.structure.blocks),
+        "total_structured_blocks": len(result.structure.blocks),
+        "clause_blocks": roles[StructureRole.CLAUSE.value],
+        "paragraph_blocks": roles[StructureRole.PARAGRAPH.value],
+        "explanation_blocks": sum(
+            block.is_explanation for block in result.structure.blocks
+        ),
+        "unknown_blocks": roles[StructureRole.UNKNOWN.value],
+        "total_chunks": len(result.chunks),
+        "clause_chunks": chunk_types["clause"],
+        "paragraph_chunks": chunk_types["paragraph"],
+        "explanation_chunks": chunk_types["explanation"],
+        "chunks_without_clause_number": sum(
+            not chunk.clause_number for chunk in result.chunks
+        ),
+        "duplicate_chunk_ids": sorted(
+            chunk_id for chunk_id, count in chunk_ids.items() if count > 1
+        ),
+        "empty_content_chunks": [
+            chunk.chunk_id for chunk in result.chunks if not chunk.content.strip()
+        ],
+    }
+
+
 def write_inspection_output(result: InspectionResult, output_dir: str | Path) -> dict[str, Path]:
     """Write complete JSON and human-readable inspection artifacts."""
 
@@ -129,14 +166,91 @@ def write_inspection_output(result: InspectionResult, output_dir: str | Path) ->
         "chunks": destination / "chunks.json",
         "chunks_markdown": destination / "chunks.md",
         "raw_text": destination / "raw_text.txt",
+        "chunk_quality_report": destination / "chunk_quality_report.json",
     }
     _write_json(paths["summary"], summary)
     _write_json(paths["document"], result.document.model_dump(mode="json"))
     _write_json(paths["structure"], result.structure.model_dump(mode="json"))
     _write_json(paths["chunks"], [chunk.model_dump(mode="json") for chunk in result.chunks])
+    _write_json(paths["chunk_quality_report"], build_chunk_quality_report(result))
     paths["chunks_markdown"].write_text(render_chunks_markdown(result.chunks), encoding="utf-8")
     paths["raw_text"].write_text(render_raw_text(result.document), encoding="utf-8")
     return paths
+
+
+def write_before_after_structure_report(
+    result: InspectionResult,
+    before_summary_path: str | Path,
+    output_dir: str | Path,
+    *,
+    focus_clauses: tuple[str, ...] = ("3.2.2", "3.5.4", "9.1.3"),
+) -> Path:
+    """Compare a prior summary with the current generated structure."""
+
+    source = Path(before_summary_path)
+    before = json.loads(source.read_text(encoding="utf-8"))
+    after = build_summary(result)
+    destination = Path(output_dir) / "before_after_structure_report.md"
+    rows = [
+        ("Clause blocks", before.get("clause_count"), after["clause_count"]),
+        (
+            "Paragraph blocks",
+            None,
+            sum(block.role == StructureRole.PARAGRAPH for block in result.structure.blocks),
+        ),
+        (
+            "Explanation blocks",
+            before.get("explanation_block_count"),
+            after["explanation_block_count"],
+        ),
+        ("Chunks", before.get("chunk_count"), after["chunk_count"]),
+        (
+            "Clause chunks",
+            before.get("content_type_counts", {}).get("clause"),
+            after["content_type_counts"].get("clause"),
+        ),
+        (
+            "Paragraph chunks",
+            before.get("content_type_counts", {}).get("paragraph"),
+            after["content_type_counts"].get("paragraph"),
+        ),
+        (
+            "Explanation chunks",
+            before.get("content_type_counts", {}).get("explanation"),
+            after["content_type_counts"].get("explanation"),
+        ),
+    ]
+    lines = [
+        "# Task 5.1 structure comparison",
+        "",
+        "Counts are diagnostic observations, not target thresholds.",
+        "",
+        "| Measure | Before | After |",
+        "| --- | ---: | ---: |",
+        *[
+            f"| {name} | {old if old is not None else 'not recorded'} | {new} |"
+            for name, old, new in rows
+        ],
+        "",
+        "## Focus clauses",
+        "",
+    ]
+    for clause_number in focus_clauses:
+        matches = [
+            block
+            for block in result.structure.blocks
+            if block.role == StructureRole.CLAUSE
+            and block.clause_number == clause_number
+        ]
+        locations = ", ".join(
+            f"page {block.page_number} ({'explanation' if block.is_explanation else 'body'})"
+            for block in matches
+        )
+        lines.append(
+            f"- `{clause_number}`: {locations or 'not recognized as a clause'}"
+        )
+    destination.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return destination
 
 
 def render_terminal_report(
@@ -193,7 +307,14 @@ def render_terminal_report(
                 "OCR is not implemented in the current pipeline.",
             ]
         )
-    lines.extend(["", "========================================", "Sample Chunks", "========================================"])
+    lines.extend(
+        [
+            "",
+            "========================================",
+            "Sample Chunks",
+            "========================================",
+        ]
+    )
     for index, chunk in enumerate(result.chunks[:max_chunks], start=1):
         lines.extend(
             [
@@ -227,14 +348,14 @@ def render_chunks_markdown(chunks: list[Chunk]) -> str:
                 "### Metadata",
                 "",
                 f"- chunk_id: {chunk.chunk_id}",
-                f"- logical_chunk_id: {chunk.logical_chunk_id or ''}",
-                f"- parent_chunk_id: {chunk.parent_chunk_id or ''}",
+                f"- logical_chunk_id: {chunk.logical_chunk_id or ''}".rstrip(),
+                f"- parent_chunk_id: {chunk.parent_chunk_id or ''}".rstrip(),
                 f"- content_type: {chunk.content_type}",
-                f"- standard_name: {chunk.standard_name or ''}",
-                f"- standard_code: {chunk.standard_code or ''}",
-                f"- chapter: {chunk.chapter or ''}",
-                f"- section: {chunk.section or ''}",
-                f"- clause_number: {chunk.clause_number or ''}",
+                f"- standard_name: {chunk.standard_name or ''}".rstrip(),
+                f"- standard_code: {chunk.standard_code or ''}".rstrip(),
+                f"- chapter: {chunk.chapter or ''}".rstrip(),
+                f"- section: {chunk.section or ''}".rstrip(),
+                f"- clause_number: {chunk.clause_number or ''}".rstrip(),
                 f"- page_start: {chunk.page_start}",
                 f"- page_end: {chunk.page_end}",
                 f"- token_count: {chunk.token_count}",

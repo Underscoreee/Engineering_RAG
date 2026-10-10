@@ -1,0 +1,15 @@
+# Connection values are read from environment variables by the Python CLIs.
+elasticsearch:
+  url_env: ELASTICSEARCH_URL
+  username_env: ELASTICSEARCH_USERNAME
+  password_env: ELASTICSEARCH_PASSWORD
+  index_env: ELASTICSEARCH_INDEX
+  default_index: engineering_rag_chunks_v1
+  server_version: 8.19.23
+  python_client_version: 8.19.2
+bm25:
+  field_weights:
+    content: 3.0
+    standard_name: 2.0
+    standard_code: 2.0
+    context_header: 1.0

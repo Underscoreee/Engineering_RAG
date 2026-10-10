@@ -6,6 +6,10 @@ from enum import Enum
 
 from pydantic import BaseModel, ConfigDict, Field
 
+from engineering_rag.ingestion.logical_line_splitter import (
+    LogicalLineSplitter,
+    LogicalSegment,
+)
 from engineering_rag.ingestion.parser import Document, TextBlock
 
 
@@ -43,6 +47,7 @@ class StructuredBlock(BaseModel):
     font_size: float | None = None
     is_bold: bool = False
     source_block_number: int
+    segment_index: int = Field(default=0, ge=0)
 
 
 class DocumentStructure(BaseModel):
@@ -60,14 +65,23 @@ class DocumentStructure(BaseModel):
 class StructureParser:
     """Recognize common chapter, section, clause, and note patterns."""
 
-    _CHINESE_CHAPTER = re.compile(r"^(第[一二三四五六七八九十百零〇0-9]+章)\s*(.*)$")
-    _NUMBERED_CHAPTER = re.compile(r"^(\d+)\s+\S.*$")
-    _SECTION = re.compile(r"^(\d+\.\d+)(?![.\w-])(?:\s+.*)?$")
-    _CLAUSE = re.compile(r"^(\d+\.\d+\.\d+)(?![.\w-])(?:\s+.*)?$")
-    _APPENDIX = re.compile(r"^附录\s*([A-Z])(?:\s+.*)?$")
-    _APPENDIX_SECTION = re.compile(r"^([A-Z])\.(\d+)(?![.\w-])(?:\s+.*)?$")
-    _NOTE = re.compile(r"^注\s*\d*\s*[:：].*$")
-    _UNRECOGNIZED_NUMBER = re.compile(r"^\d+(?:\.\d+){2,}[\w.-]*\b.*$")
+    _CHINESE_CHAPTER = re.compile(
+        r"^(第[一二三四五六七八九十百零〇0-9]+章)(?:\s+[\s\S]*)?$"
+    )
+    _NUMBERED_CHAPTER = re.compile(r"^(\d+)\s+\S[\s\S]*$")
+    _SECTION = re.compile(r"^(\d+\.\d+)(?![.\w-])\s+\S[\s\S]*$")
+    _CLAUSE = re.compile(
+        r"^((?:\d+|[A-Z])\.\d+\.\d+)(?![.\w-])(?:\s+[\s\S]*)?$"
+    )
+    _APPENDIX = re.compile(r"^附录\s*([A-Z])(?:\s+[\s\S]*)?$")
+    _APPENDIX_SECTION = re.compile(
+        r"^([A-Z])\.(\d+)(?![.\w-])(?:\s+[\s\S]*)?$"
+    )
+    _NOTE = re.compile(r"^注\s*\d*\s*[:：][\s\S]*$")
+    _UNRECOGNIZED_NUMBER = re.compile(r"^\d+(?:\.\d+){2,}[\w.-]*\b[\s\S]*$")
+
+    def __init__(self, logical_line_splitter: LogicalLineSplitter | None = None) -> None:
+        self.logical_line_splitter = logical_line_splitter or LogicalLineSplitter()
 
     def parse(self, document: Document) -> DocumentStructure:
         """Return structural annotations without altering the source document."""
@@ -82,11 +96,13 @@ class StructureParser:
         structured: list[StructuredBlock] = []
 
         for page_number, block in source_blocks:
-            item = self._classify(page_number, block, state)
             margin_role = repeated_margin_roles.get((page_number, block.block_number))
-            if margin_role is not None and item.role in (StructureRole.PARAGRAPH, StructureRole.UNKNOWN):
-                item.role = margin_role
-            structured.append(item)
+            segments = self.logical_line_splitter.split(page_number, block)
+            for segment in segments:
+                if margin_role is not None:
+                    structured.append(self._make_margin_block(segment, margin_role, state))
+                    continue
+                structured.append(self._classify(segment, state))
 
         return DocumentStructure(
             document_id=document.document_id,
@@ -96,28 +112,37 @@ class StructureParser:
             blocks=structured,
         )
 
-    def _classify(self, page_number: int, block: TextBlock, state: "_StructureState") -> StructuredBlock:
-        text = block.text.strip()
+    def _classify(
+        self, segment: LogicalSegment, state: "_StructureState"
+    ) -> StructuredBlock:
+        text = segment.text.strip()
         role = StructureRole.PARAGRAPH
+
+        state.explanation_mode = self._transition_explanation_mode(
+            text, state.explanation_mode
+        )
 
         if self._is_explanation_heading(text):
             role = StructureRole.EXPLANATION_HEADING
-            state.explanation_mode = True
-        elif match := self._APPENDIX.match(text):
-            role = StructureRole.APPENDIX
-            state.explanation_mode = False
-            state.current_chapter = f"附录 {match.group(1)}"
-            state.current_section = None
-            state.current_clause = None
-        elif match := self._CHINESE_CHAPTER.match(text):
+        elif self._is_explanation_exit_heading(text):
             role = StructureRole.CHAPTER
-            state.explanation_mode = False
             state.current_chapter = text
             state.current_section = None
             state.current_clause = None
-        elif match := self._NUMBERED_CHAPTER.match(text):
+        elif (match := self._APPENDIX.match(text)) and self._has_heading_style(segment):
+            role = StructureRole.APPENDIX
+            state.current_chapter = f"附录 {match.group(1)}"
+            state.current_section = None
+            state.current_clause = None
+        elif self._CHINESE_CHAPTER.match(text):
             role = StructureRole.CHAPTER
-            state.explanation_mode = False
+            state.current_chapter = text
+            state.current_section = None
+            state.current_clause = None
+        elif self._NUMBERED_CHAPTER.match(text) and self._is_numbered_chapter(
+            segment
+        ):
+            role = StructureRole.CHAPTER
             state.current_chapter = text
             state.current_section = None
             state.current_clause = None
@@ -136,7 +161,7 @@ class StructureParser:
             role = StructureRole.NOTE
         elif self._UNRECOGNIZED_NUMBER.match(text):
             role = StructureRole.UNKNOWN
-        elif state.is_first_block and block.is_bold and (block.font_size or 0) >= 18:
+        elif state.is_first_block and segment.is_bold and (segment.font_size or 0) >= 18:
             role = StructureRole.DOCUMENT_TITLE
 
         is_explanation = state.explanation_mode
@@ -146,18 +171,76 @@ class StructureParser:
 
         path = state.section_path
         return StructuredBlock(
-            page_number=page_number,
-            text=block.text,
-            bbox=block.bbox,
+            page_number=segment.page_number,
+            text=segment.text,
+            bbox=segment.bbox,
             role=role,
             chapter=state.current_chapter,
             section=state.current_section,
             clause_number=state.current_clause,
             section_path=path,
             is_explanation=is_explanation,
-            font_size=block.font_size,
-            is_bold=block.is_bold,
-            source_block_number=block.block_number,
+            font_size=segment.font_size,
+            is_bold=segment.is_bold,
+            source_block_number=segment.source_block_number,
+            segment_index=segment.segment_index,
+        )
+
+    @staticmethod
+    def _transition_explanation_mode(text: str, current: bool) -> bool:
+        """Change mode only at exact, semantic document boundaries."""
+
+        if StructureParser._is_explanation_heading(text):
+            return True
+        if StructureParser._is_explanation_exit_heading(text):
+            return False
+        return current
+
+    @staticmethod
+    def _is_explanation_exit_heading(text: str) -> bool:
+        return text in {"本规范用词说明", "引用标准名录"}
+
+    @staticmethod
+    def _has_heading_style(segment: LogicalSegment) -> bool:
+        """Keep synthetic inputs usable while rejecting small-font numbered lists."""
+
+        return segment.font_size is None or segment.font_size >= 13
+
+    @staticmethod
+    def _is_numbered_chapter(segment: LogicalSegment) -> bool:
+        if StructureParser._has_heading_style(segment):
+            return True
+        title = re.sub(r"^\d+\s+", "", segment.text.strip()).replace("\n", "")
+        return bool(
+            len(title) <= 30
+            and re.search(
+                r"(?:总则|术语和符号|规定|材料|分析|计算|验算|设计)$",
+                title,
+            )
+        )
+
+    @staticmethod
+    def _make_margin_block(
+        segment: LogicalSegment,
+        role: StructureRole,
+        state: "_StructureState",
+    ) -> StructuredBlock:
+        """Represent a repeated margin without mutating structural state."""
+
+        return StructuredBlock(
+            page_number=segment.page_number,
+            text=segment.text,
+            bbox=segment.bbox,
+            role=role,
+            chapter=state.current_chapter,
+            section=state.current_section,
+            clause_number=state.current_clause,
+            section_path=state.section_path,
+            is_explanation=state.explanation_mode,
+            font_size=segment.font_size,
+            is_bold=segment.is_bold,
+            source_block_number=segment.source_block_number,
+            segment_index=segment.segment_index,
         )
 
     @staticmethod

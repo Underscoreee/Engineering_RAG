@@ -66,6 +66,7 @@ def test_real_pdf_inspection_cli_exports_complete_pipeline(
         "chunks.json",
         "chunks.md",
         "raw_text.txt",
+        "chunk_quality_report.json",
     }
     assert {path.name for path in output_dir.iterdir()} == expected
 
